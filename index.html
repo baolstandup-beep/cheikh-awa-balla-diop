@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cheikh Awa Balla Diop — Directeur Artistique, Designer Graphique &amp; Créatif IA</title>
 <meta name="description" content="Portfolio officiel de Cheikh Awa Balla Diop, Fondateur de Baol Vision à Touba, Sénégal. Direction artistique d'exception, branding de marque, campagnes publicitaires, UI/UX et créativité assistée par intelligence artificielle.">
-<link rel="canonical" href="https://portefolio-theta-eight.vercel.app/">
+<link rel="canonical" href="https://cabd-portfolio.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_SN">
 <meta property="og:title" content="Cheikh Awa Balla Diop — Directeur artistique &amp; designer graphique">
 <meta property="og:description" content="Identités visuelles, campagnes et expériences digitales conçues à Touba pour des marques au Sénégal et à l'international.">
-<meta property="og:url" content="https://portefolio-theta-eight.vercel.app/">
-<meta property="og:image" content="https://portefolio-theta-eight.vercel.app/assets/images/project-vacrea-mockup.jpg">
+<meta property="og:url" content="https://cabd-portfolio.vercel.app/">
+<meta property="og:image" content="https://cabd-portfolio.vercel.app/assets/images/project-vacrea-mockup.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#080808">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><text x='50%25' y='55%25' font-family='sans-serif' font-size='13' fill='%23FF5E1A' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>CD</text></svg>">
@@ -382,6 +382,14 @@ button {
 }
 
 .nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--accent);
+}
+
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -1299,132 +1307,282 @@ body.theme-white .mosaic-item {
 }
 
 /* ═════════════════════════════════════════════════════════════════
-   13. SECTION OUTILS & TECH STACK (GRILLE AVEC TILT 3D)
+   13. LOGICIELS & IA — ÉCOSYSTÈME CRÉATIF PREMIUM
    ═════════════════════════════════════════════════════════════════ */
 .section-tools {
-  padding: 8rem 0;
+  position: relative;
+  padding: 9rem 0;
   border-bottom: 1px solid var(--border);
+  isolation: isolate;
+}
+
+.section-tools::before {
+  content: '';
+  position: absolute;
+  width: 46rem;
+  height: 46rem;
+  right: -18rem;
+  top: -8rem;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 90, 31, .11), transparent 68%);
+  pointer-events: none;
+}
+
+.tools-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(320px, .75fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: end;
+  margin-bottom: 4.5rem;
+  animation: toolsReveal .7s cubic-bezier(.2,.8,.2,1) both;
+}
+
+.tools-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  margin-bottom: 1.6rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  color: var(--accent);
+  text-transform: uppercase;
+}
+
+.tools-eyebrow::before {
+  content: '';
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent);
+}
+
+.tools-hero-title {
+  max-width: 850px;
+  font-family: var(--font-title);
+  font-size: clamp(4rem, 6vw, 5.4rem);
+  font-weight: 800;
+  line-height: .98;
+  letter-spacing: -.055em;
+  color: var(--text-main);
+}
+
+.tools-hero-title span { color: var(--accent); }
+
+.tools-hero-copy {
+  max-width: 760px;
+  margin-top: 1.65rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.tools-stat-card {
+  position: relative;
+  min-height: 215px;
+  padding: 1.8rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: space-between;
+  gap: 1.5rem;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bg-card) 88%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.045);
+  backdrop-filter: blur(18px);
+}
+
+.tools-stat-card::after {
+  content: '';
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  right: -5rem;
+  bottom: -6rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,90,31,.24), transparent 68%);
+}
+
+.tools-stat-kicker {
+  grid-column: 1 / -1;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.tools-stat-title {
+  max-width: 15rem;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-main);
+}
+
+.tools-stat-number {
+  align-self: end;
+  text-align: right;
+  color: var(--text-main);
+}
+
+.tools-stat-number strong {
+  display: block;
+  font-size: 3.4rem;
+  line-height: .85;
+  letter-spacing: -.07em;
+}
+
+.tools-stat-number span {
+  display: block;
+  margin-top: .6rem;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .tools-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-  margin-top: 3.5rem;
-}
-
-@media (max-width: 1100px) {
-  .tools-grid { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-}
-@media (max-width: 720px) {
-  .tools-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-}
-@media (max-width: 480px) {
-  .tools-grid { grid-template-columns: 1fr; gap: 1rem; }
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
 }
 
 .tool-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 2.2rem 1.4rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1.1rem;
-  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
   position: relative;
+  min-height: 220px;
+  padding: 1.75rem;
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  align-content: start;
+  gap: 1.35rem;
   overflow: hidden;
+  text-align: left;
+  background: color-mix(in srgb, var(--bg-card) 94%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.035);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), border-color .3s, box-shadow .3s;
+  animation: toolsReveal .55s cubic-bezier(.2,.8,.2,1) both;
 }
 
-.tool-card::before {
-  content: '';
+.tool-card:nth-child(2n) { animation-delay: .05s; }
+.tool-card:nth-child(3n) { animation-delay: .1s; }
+.tool-card:nth-child(4n) { animation-delay: .15s; }
+
+.tool-card::after {
+  content: '→';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--accent);
-  opacity: 0;
-  transform: scaleX(0.4);
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  right: 1.35rem;
+  bottom: 1.25rem;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: var(--accent);
+  background: var(--bg-card);
+  border: 1px solid rgba(255,90,31,.25);
+  border-radius: 50%;
+  transition: transform .3s, color .3s, background .3s;
 }
 
 .tool-card:hover {
-  border-color: var(--border-accent);
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px -8px rgba(255, 94, 26, 0.15), 0 6px 16px rgba(0, 0, 0, 0.04);
+  border-color: rgba(255,90,31,.3);
+  box-shadow: 0 18px 45px rgba(0,0,0,.08);
 }
 
-.tool-card:hover::before {
-  opacity: 1;
-  transform: scaleX(1);
+.tool-card:hover::after {
+  color: #fff;
+  background: var(--accent);
+  transform: rotate(-10deg);
 }
 
 .tool-icon-wrapper {
-  width: 58px;
-  height: 58px;
+  width: 76px;
+  height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.07));
+  border-radius: 18px;
+  background: var(--accent-soft);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1);
 }
 
-.tool-card:hover .tool-icon-wrapper {
-  transform: scale(1.12);
-}
-
-.tool-svg-icon {
-  width: 54px;
-  height: 54px;
-  display: block;
-}
+.tool-card:hover .tool-icon-wrapper { transform: scale(1.04); }
+.tool-svg-icon { width: 60px; height: 60px; display: block; }
 
 .tool-content {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
+  align-items: flex-start;
+  gap: .7rem;
 }
 
 .tool-name {
   font-family: var(--font-title);
-  font-size: 1.05rem;
-  font-weight: 800;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--text-main);
-  letter-spacing: -0.01em;
+  letter-spacing: -.025em;
 }
 
 .tool-category {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
+  max-width: 100%;
+  padding: .42rem .72rem;
+  font-size: .61rem;
   font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: .05em;
+  text-transform: uppercase;
   color: var(--accent);
   background: var(--accent-soft);
-  padding: 0.3rem 0.85rem;
+  border: 1px solid rgba(255,90,31,.2);
   border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  border: 1px solid rgba(255, 94, 26, 0.2);
-  transition: all 0.25s ease;
-}
-
-.tool-card:hover .tool-category {
-  background: var(--accent);
-  color: #FFFFFF;
-  border-color: var(--accent);
 }
 
 .tool-desc {
-  font-size: 0.8rem;
+  padding-right: 1.5rem;
+  font-size: .84rem;
+  line-height: 1.55;
   color: var(--text-muted);
-  line-height: 1.45;
-  margin-top: 0.2rem;
+}
+
+@keyframes toolsReveal {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1180px) {
+  .tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  .section-tools { padding: 7rem 0; }
+  .tools-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .tools-stat-card { min-height: 190px; }
+}
+
+@media (max-width: 620px) {
+  .section-tools { padding: 6rem 0; }
+  .tools-hero-title { font-size: clamp(2.65rem, 12vw, 3.5rem); }
+  .tools-hero-copy { font-size: .95rem; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .tool-card { min-height: 205px; padding: 1.25rem; grid-template-columns: 68px minmax(0, 1fr); gap: 1rem; }
+  .tool-icon-wrapper { width: 68px; height: 68px; }
+  .tool-svg-icon { width: 54px; height: 54px; }
+  .tool-desc { padding-right: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tools-hero, .tool-card { animation: none; }
+  .tool-card, .tool-card::after, .tool-icon-wrapper { transition: none; }
 }
 
 /* ═════════════════════════════════════════════════════════════════
@@ -2283,7 +2441,7 @@ body.theme-white .cursor-trail {
 }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Cheikh Awa Balla Diop","jobTitle":"Directeur artistique et designer graphique","url":"https://portefolio-theta-eight.vercel.app/","worksFor":{"@type":"Organization","name":"Baol Vision"},"address":{"@type":"PostalAddress","addressLocality":"Touba","addressCountry":"SN"},"sameAs":["https://www.behance.net/cheikhdiop16"]}
+{"@context":"https://schema.org","@type":"Person","name":"Cheikh Awa Balla Diop","jobTitle":"Directeur artistique et designer graphique","url":"https://cabd-portfolio.vercel.app/","worksFor":{"@type":"Organization","name":"Baol Vision"},"address":{"@type":"PostalAddress","addressLocality":"Touba","addressCountry":"SN"},"sameAs":["https://www.behance.net/cheikhdiop16"]}
 </script>
 </head>
 <body class="theme-white">
@@ -2322,7 +2480,7 @@ body.theme-white .cursor-trail {
     <a href="#a-propos" class="nav-link">À propos</a>
     <a href="#experience" class="nav-link">Parcours</a>
     <a href="#services" class="nav-link">Services</a>
-    <a href="#outils" class="nav-link">Logiciels &amp; IA</a>
+    <a href="#outils" class="nav-link active" aria-current="page">Logiciels &amp; IA</a>
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
 
@@ -2858,9 +3016,17 @@ body.theme-white .cursor-trail {
        SECTION OUTILS (TECH STACK AVEC EFFET TILT)
        ═════════════════════════════════════════════════════════════════ -->
   <section id="outils" class="section-tools wrap">
-    <div class="section-header-block">
-      <span class="section-tag">05 / Écosystème Créatif</span>
-      <h2 class="section-title-large">Outils &amp; Logiciels Maîtrisés</h2>
+    <div class="tools-hero">
+      <div class="tools-hero-copy-block">
+        <span class="tools-eyebrow">Mes outils créatifs</span>
+        <h2 class="tools-hero-title">Logiciels &amp; IA <span>que j’utilise</span></h2>
+        <p class="tools-hero-copy">Une combinaison d’outils créatifs, d’IA et de technologies modernes pour donner vie aux idées, de la conception à la production.</p>
+      </div>
+      <aside class="tools-stat-card" aria-label="Douze outils créatifs maîtrisés">
+        <span class="tools-stat-kicker">Créativité + Technologie</span>
+        <p class="tools-stat-title">Des outils puissants au service de vos idées</p>
+        <div class="tools-stat-number"><strong>12+</strong><span>Outils maîtrisés</span></div>
+      </aside>
     </div>
 
     <div class="tools-grid">
@@ -2876,7 +3042,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Adobe Photoshop</div>
           <span class="tool-category">Retouche &amp; Composition</span>
-          <p class="tool-desc">Compositing 4K, détourage &amp; photomanipulation</p>
+          <p class="tool-desc">Compositing 4K, détourage &amp; photomanipulation.</p>
         </div>
       </div>
 
@@ -2892,7 +3058,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Adobe Illustrator</div>
           <span class="tool-category">Vecteur &amp; Logos</span>
-          <p class="tool-desc">Logos vectoriels, chartes graphiques &amp; print</p>
+          <p class="tool-desc">Logos, visuels vectoriels, chartes graphiques &amp; print.</p>
         </div>
       </div>
 
@@ -2908,7 +3074,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Adobe Premiere Pro</div>
           <span class="tool-category">Montage Vidéo</span>
-          <p class="tool-desc">Montage cinématique 4K, rythme &amp; sound design</p>
+          <p class="tool-desc">Montage cinématique 4K, rythme &amp; sound design.</p>
         </div>
       </div>
 
@@ -2930,7 +3096,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Figma</div>
           <span class="tool-category">UI/UX &amp; Prototypage</span>
-          <p class="tool-desc">Design systems, wireframes &amp; interfaces web/mobiles</p>
+          <p class="tool-desc">Design systems, wireframes &amp; interfaces web/mobiles.</p>
         </div>
       </div>
 
@@ -2948,7 +3114,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Framer</div>
           <span class="tool-category">Web &amp; Interactions</span>
-          <p class="tool-desc">Développement no-code immersif &amp; micro-animations</p>
+          <p class="tool-desc">Développement no-code immersif &amp; micro-animations.</p>
         </div>
       </div>
 
@@ -2969,7 +3135,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Canva Pro</div>
           <span class="tool-category">Social Media Fast</span>
-          <p class="tool-desc">Production agile, templates &amp; visuels sponsorisés</p>
+          <p class="tool-desc">Production agile, templates &amp; visuels sponsorisés.</p>
         </div>
       </div>
 
@@ -2988,7 +3154,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">ChatGPT</div>
           <span class="tool-category">Stratégie &amp; Copy</span>
-          <p class="tool-desc">Prompt engineering, storytelling de marque &amp; scripts</p>
+          <p class="tool-desc">Prompt engineering, storytelling de marque &amp; scripts.</p>
         </div>
       </div>
 
@@ -3004,7 +3170,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Claude</div>
           <span class="tool-category">Analyse &amp; Idéation IA</span>
-          <p class="tool-desc">Recherche créative, synthèse, concepts &amp; rédaction structurée</p>
+          <p class="tool-desc">Recherche créative, synthèse, concepts &amp; rédaction structurée.</p>
         </div>
       </div>
 
@@ -3021,7 +3187,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">n8n</div>
           <span class="tool-category">Automatisation</span>
-          <p class="tool-desc">Workflows no-code, intégrations API &amp; automatisation de production</p>
+          <p class="tool-desc">Workflows no-code, intégrations API &amp; automatisation de production.</p>
         </div>
       </div>
 
@@ -3040,7 +3206,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Runway</div>
           <span class="tool-category">Génération Vidéo IA</span>
-          <p class="tool-desc">Gen-2 / Gen-3 Alpha, motion brush &amp; scènes 4K</p>
+          <p class="tool-desc">Génération vidéo IA, motion brush &amp; scènes cinématiques.</p>
         </div>
       </div>
 
@@ -3062,7 +3228,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">Kling AI</div>
           <span class="tool-category">Animation Photoréaliste</span>
-          <p class="tool-desc">Mouvements physiques réalistes &amp; rendu cinématographique</p>
+          <p class="tool-desc">Animation photoréaliste &amp; génération vidéo IA.</p>
         </div>
       </div>
 
@@ -3081,7 +3247,7 @@ body.theme-white .cursor-trail {
         <div class="tool-content">
           <div class="tool-name">CapCut</div>
           <span class="tool-category">Shorts &amp; Reels</span>
-          <p class="tool-desc">Sous-titres dynamiques, transitions &amp; formats viraux</p>
+          <p class="tool-desc">Montage rapide, formats sociaux &amp; contenus engageants.</p>
         </div>
       </div>
     </div>
