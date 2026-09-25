@@ -1598,24 +1598,110 @@ body.theme-white .mosaic-item {
 }
 
 .contact-apex-header {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem 4rem;
+  margin-bottom: 5rem;
+  padding: 2rem 0 3.5rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.contact-apex-header::after {
+  content: 'CABD';
+  position: absolute;
+  right: -0.04em;
+  bottom: -0.22em;
+  font-family: var(--font-title);
+  font-size: clamp(7rem, 19vw, 18rem);
+  font-weight: 900;
+  letter-spacing: -0.09em;
+  line-height: 1;
+  color: var(--accent-soft);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contact-apex-meta {
+  grid-column: 1 / -1;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.contact-availability::before {
+  content: '';
+  width: .55rem;
+  height: .55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 .35rem var(--accent-soft);
 }
 
 .contact-monumental-heading {
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
   font-family: var(--font-title);
-  font-size: clamp(2.8rem, 7vw, 6.5rem);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  line-height: 0.96;
+  font-size: clamp(3rem, 7.7vw, 7.6rem);
+  font-weight: 900;
+  letter-spacing: -0.055em;
+  line-height: 0.88;
   color: var(--text-main);
   text-transform: uppercase;
 }
 
+.contact-monumental-heading .heading-line {
+  display: block;
+}
+
+.contact-monumental-heading .heading-line:nth-child(2) {
+  padding-left: clamp(0rem, 7vw, 7rem);
+}
+
 .contact-monumental-heading .colored {
   color: var(--accent);
+}
+
+.contact-heading-note {
+  grid-column: 2;
+  align-self: end;
+  width: min(20rem, 28vw);
+  position: relative;
+  z-index: 1;
+  font-size: .86rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+@media (max-width: 720px) {
+  .contact-apex-header {
+    display: block;
+    padding: 1.5rem 0 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+  .contact-apex-meta { margin-bottom: 2.25rem; }
+  .contact-monumental-heading { font-size: clamp(2.7rem, 13vw, 5rem); }
+  .contact-monumental-heading .heading-line:nth-child(2) { padding-left: 0; }
+  .contact-heading-note { width: 100%; margin-top: 2rem; }
+  .contact-apex-header::after { font-size: 9rem; bottom: -.1em; }
 }
 
 .contact-apex-layout {
@@ -3206,12 +3292,16 @@ body.theme-white .cursor-trail {
        ═════════════════════════════════════════════════════════════════ -->
   <section id="contact" class="section-contact-apex wrap">
     <div class="contact-apex-header">
-      <span class="section-tag">07 / Contact Direct &amp; Collaboration</span>
+      <div class="contact-apex-meta">
+        <span class="section-tag">07 / Contact Direct &amp; Collaboration</span>
+        <span class="contact-availability">Disponible pour de nouveaux projets</span>
+      </div>
       <h2 class="contact-monumental-heading">
-        UN PROJET EN TÊTE ?<br>
-        CRÉONS QUELQUE CHOSE<br>
-        <span class="colored">D'INOUBLIABLE.</span>
+        <span class="heading-line">Un projet en tête&nbsp;?</span>
+        <span class="heading-line">Créons quelque chose</span>
+        <span class="heading-line colored">d'inoubliable.</span>
       </h2>
+      <p class="contact-heading-note">Direction artistique, identité visuelle et expériences digitales conçues depuis Touba pour aller plus loin.</p>
     </div>
 
     <div class="contact-apex-layout">
