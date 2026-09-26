@@ -1747,119 +1747,145 @@ body.theme-white .mosaic-item {
    16. SECTION CONTACT PLEIN ÉCRAN ("HAVE A PROJECT?")
    ═════════════════════════════════════════════════════════════════ */
 .section-contact-apex {
-  min-height: 100vh;
-  padding: 8rem 0 6rem;
+  padding-top: 0;
+  padding-bottom: 6rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
 }
 
 .contact-apex-header {
+  --cta-orange: #FF5A1F;
+  --cta-ink: #0B0B0B;
+  --cta-paper: #FAF9F7;
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 2rem 4rem;
-  margin-bottom: 5rem;
-  padding: 2rem 0 3.5rem;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  left: 50%;
+  width: 100vw;
+  min-height: 650px;
+  margin: 0 0 7rem -50vw;
+  padding: 100px max(5vw, calc((100vw - var(--wrap-max)) / 2 + 3rem)) 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
+  isolation: isolate;
+  color: var(--cta-ink);
+  background:
+    radial-gradient(circle at 91% 92%, rgba(255, 90, 31, .19), transparent 34%),
+    radial-gradient(circle at 81% 18%, rgba(255, 90, 31, .055), transparent 29%),
+    linear-gradient(128deg, #FCFBF9 0%, var(--cta-paper) 72%, #FFF8F3 100%);
 }
 
-.contact-apex-header::after {
-  content: 'CABD';
+.contact-apex-header::before {
+  content: '';
   position: absolute;
-  right: -0.04em;
-  bottom: -0.22em;
-  font-family: var(--font-title);
-  font-size: clamp(7rem, 19vw, 18rem);
-  font-weight: 900;
-  letter-spacing: -0.09em;
-  line-height: 1;
-  color: var(--accent-soft);
+  inset: 0;
+  opacity: .022;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitchTiles'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 .contact-apex-meta {
-  grid-column: 1 / -1;
+  width: min(70%, 1050px);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: .9rem;
+  margin-bottom: clamp(2.5rem, 5vh, 4rem);
   position: relative;
   z-index: 1;
 }
 
-.contact-availability {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  font-weight: 700;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--text-muted);
+.contact-apex-meta::after {
+  content: '';
+  width: clamp(42px, 6vw, 86px);
+  height: 1px;
+  background: var(--cta-orange);
 }
 
-.contact-availability::before {
-  content: '';
-  width: .55rem;
-  height: .55rem;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 .35rem var(--accent-soft);
+.contact-apex-kicker {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--cta-orange);
 }
 
 .contact-monumental-heading {
-  grid-column: 1 / -1;
+  width: min(92%, 1350px);
   position: relative;
   z-index: 1;
   font-family: var(--font-title);
-  font-size: clamp(3rem, 7.7vw, 7.6rem);
+  font-size: clamp(4rem, 5.5vw, 6.75rem);
   font-weight: 900;
-  letter-spacing: -0.055em;
-  line-height: 0.88;
-  color: var(--text-main);
+  letter-spacing: -0.04em;
+  line-height: .92;
+  color: var(--cta-ink);
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .contact-monumental-heading .heading-line {
   display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .7s cubic-bezier(.22, 1, .36, 1), transform .7s cubic-bezier(.22, 1, .36, 1);
 }
 
-.contact-monumental-heading .heading-line:nth-child(2) {
-  padding-left: clamp(0rem, 7vw, 7rem);
+.contact-mobile-break { display: inline; }
+
+.contact-apex-header.is-visible .heading-line {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.contact-monumental-heading .colored {
-  color: var(--accent);
+.contact-apex-header.is-visible .heading-line:nth-child(2) { transition-delay: .08s; }
+.contact-apex-header.is-visible .heading-line:nth-child(3) { transition-delay: .16s; }
+
+.contact-monumental-heading .heading-accent {
+  color: var(--cta-orange);
+  transition: color .3s ease, transform .3s ease;
 }
 
-.contact-heading-note {
-  grid-column: 2;
-  align-self: end;
-  width: min(20rem, 28vw);
-  position: relative;
-  z-index: 1;
-  font-size: .86rem;
-  line-height: 1.6;
-  color: var(--text-muted);
+.contact-apex-header:hover .heading-accent {
+  color: #FF682F;
+  transform: translateX(4px);
+}
+
+.contact-apex-orbit {
+  position: absolute;
+  right: -2vw;
+  bottom: 4%;
+  width: min(36vw, 560px);
+  color: var(--cta-orange);
+  opacity: .32;
+  pointer-events: none;
+  z-index: 0;
+  animation: contactOrbitDrift 16s ease-in-out infinite alternate;
+}
+
+@keyframes contactOrbitDrift {
+  from { transform: translate3d(0, 8px, 0) scale(.99); }
+  to { transform: translate3d(-12px, -8px, 0) scale(1.015); }
+}
+
+@media (max-width: 1024px) {
+  .contact-apex-header { min-height: 580px; padding: 90px 5vw 100px; }
+  .contact-monumental-heading { width: 88%; font-size: clamp(3.25rem, 8vw, 5.125rem); }
 }
 
 @media (max-width: 720px) {
   .contact-apex-header {
-    display: block;
-    padding: 1.5rem 0 2.5rem;
-    margin-bottom: 3.5rem;
+    min-height: 520px;
+    margin-bottom: 4.5rem;
+    padding: 70px 20px;
+    justify-content: center;
   }
-  .contact-apex-meta { margin-bottom: 2.25rem; }
-  .contact-monumental-heading { font-size: clamp(2.7rem, 13vw, 5rem); }
-  .contact-monumental-heading .heading-line:nth-child(2) { padding-left: 0; }
-  .contact-heading-note { width: 100%; margin-top: 2rem; }
-  .contact-apex-header::after { font-size: 9rem; bottom: -.1em; }
+  .contact-apex-meta { width: 100%; margin-bottom: 2.5rem; }
+  .contact-monumental-heading { width: 100%; font-size: clamp(2.75rem, 12.4vw, 4rem); line-height: .95; letter-spacing: -.045em; }
+  .contact-monumental-heading .heading-line { margin-bottom: .14em; }
+  .contact-mobile-break { display: block; }
+  .contact-apex-orbit { width: 76vw; right: -38vw; bottom: 5%; opacity: .18; }
 }
 
 .contact-apex-layout {
@@ -2182,6 +2208,10 @@ textarea.input-apex {
   }
   .marquee-track {
     animation: none !important;
+  }
+  .contact-monumental-heading .heading-line {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -3459,15 +3489,17 @@ body.theme-white .cursor-trail {
   <section id="contact" class="section-contact-apex wrap">
     <div class="contact-apex-header">
       <div class="contact-apex-meta">
-        <span class="section-tag">07 / Contact Direct &amp; Collaboration</span>
-        <span class="contact-availability">Disponible pour de nouveaux projets</span>
+        <span class="contact-apex-kicker">Créons ensemble</span>
       </div>
       <h2 class="contact-monumental-heading">
-        <span class="heading-line">Un projet en tête&nbsp;?</span>
-        <span class="heading-line">Créons quelque chose</span>
-        <span class="heading-line colored">d'inoubliable.</span>
+        <span class="heading-line">UN PROJET <span class="contact-mobile-break">EN TÊTE&nbsp;?</span></span>
+        <span class="heading-line">CRÉONS <span class="contact-mobile-break">QUELQUE CHOSE</span></span>
+        <span class="heading-line heading-accent">D’INOUBLIABLE.</span>
       </h2>
-      <p class="contact-heading-note">Direction artistique, identité visuelle et expériences digitales conçues depuis Touba pour aller plus loin.</p>
+      <svg class="contact-apex-orbit" viewBox="0 0 620 360" aria-hidden="true">
+        <path d="M635 317C498 365 340 342 222 267C119 202 43 101 0 0" fill="none" stroke="currentColor" stroke-width="1.25"/>
+        <path d="M660 274C518 330 373 307 261 236C169 177 103 93 65 10" fill="none" stroke="currentColor" stroke-width=".7" opacity=".45"/>
+      </svg>
     </div>
 
     <div class="contact-apex-layout">
@@ -3828,6 +3860,28 @@ document.querySelectorAll('.service-item').forEach(item => {
 
   const section = document.querySelector('.section-stats');
   if (section) observer.observe(section);
+})();
+
+/* 8b. Entrée éditoriale du CTA contact */
+(function initContactHeadingReveal() {
+  const contactHeader = document.querySelector('.contact-apex-header');
+  if (!contactHeader) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    contactHeader.classList.add('is-visible');
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        contactHeader.classList.add('is-visible');
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.22 });
+
+  observer.observe(contactHeader);
 })();
 
 /* 9. Copie d'Email Interactif */
