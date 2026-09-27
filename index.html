@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cheikh Awa Balla Diop — Directeur Artistique, Designer Graphique &amp; Créatif IA</title>
-<meta name="description" content="Portfolio officiel de Cheikh Awa Balla Diop, Fondateur de Baol Vision à Touba, Sénégal. Direction artistique d'exception, branding de marque, campagnes publicitaires, UI/UX et créativité assistée par intelligence artificielle.">
+<title>Graphiste à Touba &amp; directeur artistique Sénégal — CABD</title>
+<meta name="description" content="Cheikh Awa Balla Diop, graphiste à Touba et directeur artistique au Sénégal : identité visuelle, branding, affiches, packaging, UI/UX et campagnes créatives.">
+<meta name="keywords" content="graphiste à Touba, directeur artistique Sénégal, création identité visuelle Sénégal, branding Touba, designer graphique Sénégal, Baol Vision">
+<meta name="geo.region" content="SN-DB"><meta name="geo.placename" content="Touba, Sénégal">
 <link rel="canonical" href="https://cabd-portfolio.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_SN">
@@ -14,6 +16,7 @@
 <meta property="og:image" content="https://cabd-portfolio.vercel.app/assets/images/project-vacrea-mockup.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#080808">
+<script defer src="assets/analytics.js"></script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><text x='50%25' y='55%25' font-family='sans-serif' font-size='13' fill='%23FF5E1A' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>CD</text></svg>">
 
 <!-- Google Fonts : Plus Jakarta Sans (Titres), Inter (Corps), IBM Plex Mono (Technique) -->
@@ -58,6 +61,7 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   background-color: var(--bg-main);
   color: var(--text-main);
@@ -2462,16 +2466,36 @@ body.theme-white .cursor-trail {
 .trust-card { background: var(--bg-main); padding: 2rem; }
 .trust-card strong { display: block; color: var(--text-main); font-size: 1.05rem; margin-bottom: .65rem; }
 .trust-card p { color: var(--text-muted); font-size: .95rem; }
+.client-proof { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+.contact-apex-layout > *, .footer-main > *, .local-seo-grid > * { min-width:0; }
+.channel-val { overflow-wrap:anywhere; }
+.client-proof-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border); }
+.client-proof-name { min-height:110px; display:flex; align-items:center; justify-content:center; padding:1.5rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border); color:var(--text-main); font-weight:800; text-align:center; letter-spacing:-.02em; }
+.client-proof-name:nth-child(4n) { border-right:0; }
+.local-seo { padding:6rem 0; border-bottom:1px solid var(--border); }
+.local-seo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.local-seo-card { padding:2rem; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; }
+.local-seo-card h3 { color:var(--text-main); font-size:1.05rem; margin-bottom:.75rem; }
+.local-seo-card p { color:var(--text-muted); font-size:.94rem; }
+.form-status { min-height:1.5rem; font-size:.9rem; font-weight:600; }
+.form-status.success { color:#188447; }.form-status.error { color:#c83b08; }
+.hp-field { position:absolute!important; left:-9999px!important; width:1px!important; height:1px!important; overflow:hidden!important; }
+.legal-consent { font-size:.78rem; color:var(--text-muted); line-height:1.55; }
+.legal-consent a { color:var(--accent); text-decoration:underline; }
 @media (max-width: 760px) {
   .trust-grid { grid-template-columns: 1fr; }
+  .client-proof-grid, .local-seo-grid { grid-template-columns:1fr 1fr; }
+  .client-proof-name:nth-child(odd) { border-right:1px solid var(--border); }
+  .client-proof-name:nth-child(even) { border-right:0; }
   .header-nav { padding-inline: 1rem; }
   .nav-brand > span:nth-child(2) { max-width: 12ch; line-height: 1.1; }
   .btn-nav-contact, .btn-theme-toggle span:last-child { display: none; }
   .hero-section { padding-top: 8rem; }
 }
+@media (max-width: 520px) { .client-proof-grid, .local-seo-grid { grid-template-columns:1fr; } .client-proof-name { border-right:0!important; } }
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Cheikh Awa Balla Diop","jobTitle":"Directeur artistique et designer graphique","url":"https://cabd-portfolio.vercel.app/","worksFor":{"@type":"Organization","name":"Baol Vision"},"address":{"@type":"PostalAddress","addressLocality":"Touba","addressCountry":"SN"},"sameAs":["https://www.behance.net/cheikhdiop16"]}
+{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://cabd-portfolio.vercel.app/#person","name":"Cheikh Awa Balla Diop","jobTitle":"Directeur artistique et designer graphique","url":"https://cabd-portfolio.vercel.app/","worksFor":{"@id":"https://cabd-portfolio.vercel.app/#business"},"address":{"@type":"PostalAddress","addressLocality":"Touba","addressCountry":"SN"},"sameAs":["https://www.behance.net/cheikhdiop16"]},{"@type":"ProfessionalService","@id":"https://cabd-portfolio.vercel.app/#business","name":"Baol Vision — Cheikh Awa Balla Diop","url":"https://cabd-portfolio.vercel.app/","email":"contact.baolvision@gmail.com","telephone":"+221773033196","areaServed":[{"@type":"City","name":"Touba"},{"@type":"Country","name":"Sénégal"}],"knowsAbout":["Direction artistique","Design graphique","Identité visuelle","Branding","Packaging","UI/UX"]}]}
 </script>
 </head>
 <body class="theme-white">
@@ -2581,7 +2605,7 @@ body.theme-white .cursor-trail {
       <!-- Carte Visuelle Interactive / Portrait avec Réactivité Souris -->
       <div class="hero-visual-col">
         <div class="hero-interactive-card" id="hero-card">
-          <img src="assets/images/cheikh-awa-balla-diop-portrait.png" alt="Portrait de Cheikh Awa Balla Diop, directeur artistique de Baol Vision" id="hero-img" fetchpriority="high" decoding="async">
+          <img src="assets/images/optimized/cheikh-awa-balla-diop-portrait-1280.webp" srcset="assets/images/optimized/cheikh-awa-balla-diop-portrait-640.webp 640w, assets/images/optimized/cheikh-awa-balla-diop-portrait-1280.webp 1049w" sizes="(max-width:760px) 92vw, 44vw" width="1049" height="1499" alt="Portrait de Cheikh Awa Balla Diop, directeur artistique de Baol Vision" id="hero-img" fetchpriority="high" decoding="async">
           <div class="hero-card-badge">
             <div>
               <div class="badge-name">CHEIKH AWA BALLA DIOP</div>
@@ -2731,7 +2755,7 @@ body.theme-white .cursor-trail {
     <div class="pure-works-mosaic">
       <!-- 1. PRIZENT -->
       <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-prizent.png', 'PRIZENT · Système de Pointage Smartphone', 'project.html?id=prizent')">
-        <img src="assets/images/project-prizent.png" alt="PRIZENT Système de pointage smartphone" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-prizent-1280.webp" srcset="assets/images/optimized/project-prizent-640.webp 640w, assets/images/optimized/project-prizent-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="1024" alt="PRIZENT Système de pointage smartphone" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Digital · App</span>
           <div class="mosaic-bottom-info">
@@ -2743,7 +2767,7 @@ body.theme-white .cursor-trail {
 
       <!-- 2. VACREA -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-vacrea.jpg', 'VACREA · Vacances de Créations Touba', 'project.html?id=vacrea')">
-        <img src="assets/images/project-vacrea.jpg" alt="VACREA Formation Graphisme et Web Touba" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-vacrea-1280.webp" srcset="assets/images/optimized/project-vacrea-640.webp 640w, assets/images/optimized/project-vacrea-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="1024" alt="VACREA Formation Graphisme et Web Touba" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Formation</span>
           <div class="mosaic-bottom-info">
@@ -2755,7 +2779,7 @@ body.theme-white .cursor-trail {
 
       <!-- 3. GIE REINE DIOR -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-reine-dior.jpg', 'GIE Reine Dior · Formation Make Up & Coiffure', 'project.html?id=reine-dior')">
-        <img src="assets/images/project-reine-dior.jpg" alt="GIE Reine Dior and Co Formation Professionnelle Make up et Coiffure" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-reine-dior-1280.webp" srcset="assets/images/optimized/project-reine-dior-640.webp 640w, assets/images/optimized/project-reine-dior-1280.webp 819w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="819" height="1024" alt="GIE Reine Dior and Co Formation Professionnelle Make up et Coiffure" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Beauté</span>
           <div class="mosaic-bottom-info">
@@ -2767,7 +2791,7 @@ body.theme-white .cursor-trail {
 
       <!-- 4. 115e ANNIVERSAIRE APPEL SEYDINA LIMAMOU LAYE -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-layene-115.jpg', '115e Anniversaire Appel · Seydina Limamou Laye', 'project.html?id=layene-115')">
-        <img src="assets/images/project-layene-115.jpg" alt="115e anniversaire L'Appel Seydina Limamou Laye" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-layene-115-1280.webp" srcset="assets/images/optimized/project-layene-115-640.webp 640w, assets/images/optimized/project-layene-115-1280.webp 682w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="682" height="1024" alt="115e anniversaire L'Appel Seydina Limamou Laye" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Célébration</span>
           <div class="mosaic-bottom-info">
@@ -2779,7 +2803,7 @@ body.theme-white .cursor-trail {
 
       <!-- 5. DEMANDOO -->
       <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-demandoo.png', 'DEMANDOO · Solution de Covoiturage Touba - Dakar', 'project.html?id=demandoo')">
-        <img src="assets/images/project-demandoo.png" alt="Demandoo Covoiturage Touba Dakar Yombalna Sa Tukki" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-demandoo-1280.webp" srcset="assets/images/optimized/project-demandoo-640.webp 640w, assets/images/optimized/project-demandoo-1280.webp 723w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="723" height="1024" alt="Demandoo Covoiturage Touba Dakar Yombalna Sa Tukki" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">UI/UX · Covoiturage</span>
           <div class="mosaic-bottom-info">
@@ -2791,7 +2815,7 @@ body.theme-white .cursor-trail {
 
       <!-- 6. POROXAAN INITIATIVE VOLAILLE -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-poroxaan.jpg', 'POROXAAN · Opération Spéciale Gamou Mawlid Touba', 'project.html?id=poroxaan')">
-        <img src="assets/images/project-poroxaan.jpg" alt="Poroxaan Initiative Volaille - Spéciale Opération Gamou Mawlid" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-poroxaan-1280.webp" srcset="assets/images/optimized/project-poroxaan-640.webp 640w, assets/images/optimized/project-poroxaan-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="1024" alt="Poroxaan Initiative Volaille - Spéciale Opération Gamou Mawlid" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Gamou</span>
           <div class="mosaic-bottom-info">
@@ -2803,7 +2827,7 @@ body.theme-white .cursor-trail {
 
       <!-- 7. CASS ONLINE -->
       <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-cass-online.jpg', 'CASS ONLINE · Place de Marché Mobile', 'project.html?id=cass-online')">
-        <img src="assets/images/project-cass-online.jpg" alt="Cass Online - Comme un marché mais dans un téléphone" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-cass-online-1280.webp" srcset="assets/images/optimized/project-cass-online-640.webp 640w, assets/images/optimized/project-cass-online-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="976" alt="Cass Online - Comme un marché mais dans un téléphone" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Branding · E-Commerce</span>
           <div class="mosaic-bottom-info">
@@ -2815,7 +2839,7 @@ body.theme-white .cursor-trail {
 
       <!-- 8. MSTECH -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-mstech.jpg', 'MSTECH · Services Techniques & Sécurité Touba', 'project.html?id=mstech')">
-        <img src="assets/images/project-mstech.jpg" alt="MSTech Al Moubarack Services Technologie Touba" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-mstech-1280.webp" srcset="assets/images/optimized/project-mstech-640.webp 640w, assets/images/optimized/project-mstech-1280.webp 985w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="985" height="1024" alt="MSTech Al Moubarack Services Technologie Touba" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Print · Corporate</span>
           <div class="mosaic-bottom-info">
@@ -2827,7 +2851,7 @@ body.theme-white .cursor-trail {
 
       <!-- 9. SANOFI - PROJET URGEST -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-sanofi-urgest.jpg', 'SANOFI · Conférence Projet URGEST', 'project.html?id=sanofi-urgest')">
-        <img src="assets/images/project-sanofi-urgest.jpg" alt="Sanofi présente Projet URGEST Pr Oumar Kane" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-sanofi-urgest-1280.webp" srcset="assets/images/optimized/project-sanofi-urgest-640.webp 640w, assets/images/optimized/project-sanofi-urgest-1280.webp 822w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="822" height="1024" alt="Sanofi présente Projet URGEST Pr Oumar Kane" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Santé</span>
           <div class="mosaic-bottom-info">
@@ -2839,7 +2863,7 @@ body.theme-white .cursor-trail {
 
       <!-- 10. DAROU SALAM ASSURANCE -->
       <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-darou-salam.png', 'DAROU SALAM ASSURANCE · Moto Auto Tricycle', 'project.html?id=darou-salam')">
-        <img src="assets/images/project-darou-salam.png" alt="Darou Salam Assurance Digitale chez Maodo mou Bamba" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-darou-salam-1280.webp" srcset="assets/images/optimized/project-darou-salam-640.webp 640w, assets/images/optimized/project-darou-salam-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="1024" alt="Darou Salam Assurance Digitale chez Maodo mou Bamba" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Campagne · Assurance</span>
           <div class="mosaic-bottom-info">
@@ -2851,7 +2875,7 @@ body.theme-white .cursor-trail {
 
       <!-- 11. PASTEF GIGA CARAVANE MBACKÉ -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-pastef-mbacke.jpg', 'PASTEF · Giga Caravane Mbacké (Législatives 2024)', 'project.html?id=pastef-mbacke')">
-        <img src="assets/images/project-pastef-mbacke.jpg" alt="PASTEF Giga Caravane Mbacke - Sénégal 2050 - Législatives 2024" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-pastef-mbacke-1280.webp" srcset="assets/images/optimized/project-pastef-mbacke-640.webp 640w, assets/images/optimized/project-pastef-mbacke-1280.webp 819w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="819" height="1024" alt="PASTEF Giga Caravane Mbacke - Sénégal 2050 - Législatives 2024" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Campagne</span>
           <div class="mosaic-bottom-info">
@@ -2863,7 +2887,7 @@ body.theme-white .cursor-trail {
 
       <!-- 12. FONDATION AHFAADU - NDIGEUL BISSUP ZIKRULLAH -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-ndigeul-zikrullah.jpg', 'FONDATION AHFAADU · Ndigeul Bissup Zikrullah Touba', 'project.html?id=ndigeul-zikrullah')">
-        <img src="assets/images/project-ndigeul-zikrullah.jpg" alt="Fondation Ahfaadu Cheikh Ibrahima Faal - Ndigeul Bissup Zikrullah" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-ndigeul-zikrullah-1280.webp" srcset="assets/images/optimized/project-ndigeul-zikrullah-640.webp 640w, assets/images/optimized/project-ndigeul-zikrullah-1280.webp 723w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="723" height="1024" alt="Fondation Ahfaadu Cheikh Ibrahima Faal - Ndigeul Bissup Zikrullah" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Zikrullah</span>
           <div class="mosaic-bottom-info">
@@ -2875,7 +2899,7 @@ body.theme-white .cursor-trail {
 
       <!-- 13. MAGAL NGABOU ÉDITION 2026 -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-magal-ngabou.jpg', 'MAGAL NGABOU · Édition 2026 (Serigne Khalil LO)', 'project.html?id=magal-ngabou')">
-        <img src="assets/images/project-magal-ngabou.jpg" alt="Magal Ngabou Édition 2026 - Serigne Khalil LO" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-magal-ngabou-1280.webp" srcset="assets/images/optimized/project-magal-ngabou-640.webp 640w, assets/images/optimized/project-magal-ngabou-1280.webp 723w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="723" height="1024" alt="Magal Ngabou Édition 2026 - Serigne Khalil LO" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Magal</span>
           <div class="mosaic-bottom-info">
@@ -2887,7 +2911,7 @@ body.theme-white .cursor-trail {
 
       <!-- 14. GAMOU DAROU MINAME PET -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-gamou-darou-miname.png', 'GAMOU DAROU MINAME PET · Dahira Hiznoul Abrare', 'project.html?id=gamou-darou-miname')">
-        <img src="assets/images/project-gamou-darou-miname.png" alt="Gamou Darou Miname Pet - Serigne El Hadji Mame Thierno Mbacke" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-gamou-darou-miname-1280.webp" srcset="assets/images/optimized/project-gamou-darou-miname-640.webp 640w, assets/images/optimized/project-gamou-darou-miname-1280.webp 723w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="723" height="1024" alt="Gamou Darou Miname Pet - Serigne El Hadji Mame Thierno Mbacke" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Gamou</span>
           <div class="mosaic-bottom-info">
@@ -2899,7 +2923,7 @@ body.theme-white .cursor-trail {
 
       <!-- 15. PAS-PAS TABASKI CRÉATIVE -->
       <div class="mosaic-item" data-cat="print digital" onclick="openPortfolioModal('assets/images/project-pas-pas-tabaski.jpg', 'PAS-PAS · Tabaski Créative (Création IA & 3D)', 'project.html?id=pas-pas-tabaski')">
-        <img src="assets/images/project-pas-pas-tabaski.jpg" alt="PAS-PAS Bonne Fête de Tabaski création 3D IA" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-pas-pas-tabaski-1280.webp" srcset="assets/images/optimized/project-pas-pas-tabaski-640.webp 640w, assets/images/optimized/project-pas-pas-tabaski-1280.webp 819w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="819" height="1024" alt="PAS-PAS Bonne Fête de Tabaski création 3D IA" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Création 3D · IA</span>
           <div class="mosaic-bottom-info">
@@ -2911,7 +2935,7 @@ body.theme-white .cursor-trail {
 
       <!-- 16. PAS-PAS TALK-SHOW WHATSAPP -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-pas-pas-talkshow.jpg', 'PAS-PAS · Talk-Show WhatsApp (Mbacké Khéwar)', 'project.html?id=pas-pas-talkshow')">
-        <img src="assets/images/project-pas-pas-talkshow.jpg" alt="PAS-PAS Talk-show WhatsApp Mouvement Mbacke" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-pas-pas-talkshow-1280.webp" srcset="assets/images/optimized/project-pas-pas-talkshow-640.webp 640w, assets/images/optimized/project-pas-pas-talkshow-1280.webp 819w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="819" height="1024" alt="PAS-PAS Talk-show WhatsApp Mouvement Mbacke" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Affiche · Débat</span>
           <div class="mosaic-bottom-info">
@@ -2923,7 +2947,7 @@ body.theme-white .cursor-trail {
 
       <!-- 17. POROKHANE SOOW KHIAKRY -->
       <div class="mosaic-item" data-cat="digital print" onclick="openPortfolioModal('assets/images/project-porokhane-soow.jpg', 'POROKHANE SOOW · Packaging Khiakry 500G Touba', 'project.html?id=porokhane-soow')">
-        <img src="assets/images/project-porokhane-soow.jpg" alt="Porokhane Soow Khiakry 500G Packaging Touba Darou Khoudoss" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-porokhane-soow-1280.webp" srcset="assets/images/optimized/project-porokhane-soow-640.webp 640w, assets/images/optimized/project-porokhane-soow-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="724" alt="Porokhane Soow Khiakry 500G Packaging Touba Darou Khoudoss" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Packaging · Produit</span>
           <div class="mosaic-bottom-info">
@@ -2935,7 +2959,7 @@ body.theme-white .cursor-trail {
 
       <!-- 18. GRAPHIA BOOTCAMP IA -->
       <div class="mosaic-item" data-cat="digital print" onclick="openPortfolioModal('assets/images/project-graphia-bootcamp.jpg', 'GRAPHIA · Bootcamps Infographie & IA Touba / Mbacké', 'project.html?id=graphia')">
-        <img src="assets/images/project-graphia-bootcamp.jpg" alt="GRAPHIA Un nouveau chapitre s ouvre Bootcamps Infographie et IA" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-graphia-bootcamp-1280.webp" srcset="assets/images/optimized/project-graphia-bootcamp-640.webp 640w, assets/images/optimized/project-graphia-bootcamp-1280.webp 819w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="819" height="1024" alt="GRAPHIA Un nouveau chapitre s ouvre Bootcamps Infographie et IA" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Infographie &amp; IA</span>
           <div class="mosaic-bottom-info">
@@ -2947,7 +2971,7 @@ body.theme-white .cursor-trail {
 
       <!-- 19. ACIS FORUM WADIAL MAGAL TOUBA -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-acis-forum.jpg', 'ACIS · Forum Économique Wadial Magal Touba (18 Safar)', 'project.html?id=acis-forum')">
-        <img src="assets/images/project-acis-forum.jpg" alt="ACIS Forum Wadial Magal Touba 2026 Heliport de Touba" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-acis-forum-1280.webp" srcset="assets/images/optimized/project-acis-forum-640.webp 640w, assets/images/optimized/project-acis-forum-1280.webp 724w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="724" height="1024" alt="ACIS Forum Wadial Magal Touba 2026 Heliport de Touba" loading="lazy" decoding="async">
         <div class="mosaic-overlay">
           <span class="mosaic-top-pill">Forum Économique</span>
           <div class="mosaic-bottom-info">
@@ -2959,61 +2983,61 @@ body.theme-white .cursor-trail {
 
       <!-- 20–23. SET-TRANS -->
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-setrans-brochure-cover.png', 'SET-TRANS · Couverture de brochure', 'project.html?id=setrans')">
-        <img src="assets/images/project-setrans-brochure-cover.png" alt="Couverture de la brochure SET-TRANS transport et logistique" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-setrans-brochure-cover-1280.webp" srcset="assets/images/optimized/project-setrans-brochure-cover-640.webp 640w, assets/images/optimized/project-setrans-brochure-cover-1280.webp 1220w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1220" height="867" alt="Couverture de la brochure SET-TRANS transport et logistique" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Brochure · Logistique</span><div class="mosaic-bottom-info"><span class="mosaic-title">SET-TRANS · Couverture</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-setrans-brochure-interior.png', 'SET-TRANS · Présentation corporate', 'project.html?id=setrans')">
-        <img src="assets/images/project-setrans-brochure-interior.png" alt="Présentation intérieure de la brochure SET-TRANS" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-setrans-brochure-interior-1280.webp" srcset="assets/images/optimized/project-setrans-brochure-interior-640.webp 640w, assets/images/optimized/project-setrans-brochure-interior-1280.webp 1217w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1217" height="891" alt="Présentation intérieure de la brochure SET-TRANS" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Édition · Corporate</span><div class="mosaic-bottom-info"><span class="mosaic-title">SET-TRANS · Intérieur</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-setrans-brochure-open.png', 'SET-TRANS · Brochure ouverte', 'project.html?id=setrans')">
-        <img src="assets/images/project-setrans-brochure-open.png" alt="Mockup ouvert de la brochure SET-TRANS" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-setrans-brochure-open-1280.webp" srcset="assets/images/optimized/project-setrans-brochure-open-640.webp 640w, assets/images/optimized/project-setrans-brochure-open-1280.webp 1243w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1243" height="883" alt="Mockup ouvert de la brochure SET-TRANS" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Mockup · Brochure</span><div class="mosaic-bottom-info"><span class="mosaic-title">SET-TRANS · Double page</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
       <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-setrans-brochure-mockup.png', 'SET-TRANS · Dépliant corporate', 'project.html?id=setrans')">
-        <img src="assets/images/project-setrans-brochure-mockup.png" alt="Mockup du dépliant corporate SET-TRANS" loading="lazy" decoding="async">
+        <img src="assets/images/optimized/project-setrans-brochure-mockup-1280.webp" srcset="assets/images/optimized/project-setrans-brochure-mockup-640.webp 640w, assets/images/optimized/project-setrans-brochure-mockup-1280.webp 1217w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1217" height="891" alt="Mockup du dépliant corporate SET-TRANS" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Print · Dépliant</span><div class="mosaic-bottom-info"><span class="mosaic-title">SET-TRANS · Mockup</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
 
       <!-- 24–26. KHELCOM CAFÉ TOUBA -->
-      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-04.jpg', 'KhelCom · Packaging Café Touba', '#')">
-        <img src="assets/images/project-khelcom-packaging-04.jpg" alt="Packaging Café Touba KhelCom vue de face" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-04.jpg', 'KhelCom · Packaging Café Touba', 'project.html?id=khelcom')">
+        <img src="assets/images/optimized/project-khelcom-packaging-04-1280.webp" srcset="assets/images/optimized/project-khelcom-packaging-04-640.webp 640w, assets/images/optimized/project-khelcom-packaging-04-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="853" alt="Packaging Café Touba KhelCom vue de face" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Packaging · Café</span><div class="mosaic-bottom-info"><span class="mosaic-title">KhelCom · Face</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
-      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-03.jpg', 'KhelCom · Packaging en perspective', '#')">
-        <img src="assets/images/project-khelcom-packaging-03.jpg" alt="Packaging Café Touba KhelCom en perspective" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-03.jpg', 'KhelCom · Packaging en perspective', 'project.html?id=khelcom')">
+        <img src="assets/images/optimized/project-khelcom-packaging-03-1280.webp" srcset="assets/images/optimized/project-khelcom-packaging-03-640.webp 640w, assets/images/optimized/project-khelcom-packaging-03-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="853" alt="Packaging Café Touba KhelCom en perspective" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Packaging · Mockup</span><div class="mosaic-bottom-info"><span class="mosaic-title">KhelCom · Perspective</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
-      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-02.jpg', 'KhelCom · Design de sachet', '#')">
-        <img src="assets/images/project-khelcom-packaging-02.jpg" alt="Design de sachet Café Touba KhelCom" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="print" onclick="openPortfolioModal('assets/images/project-khelcom-packaging-02.jpg', 'KhelCom · Design de sachet', 'project.html?id=khelcom')">
+        <img src="assets/images/optimized/project-khelcom-packaging-02-1280.webp" srcset="assets/images/optimized/project-khelcom-packaging-02-640.webp 640w, assets/images/optimized/project-khelcom-packaging-02-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="853" alt="Design de sachet Café Touba KhelCom" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Identité · Produit</span><div class="mosaic-bottom-info"><span class="mosaic-title">KhelCom · Sachet</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
 
       <!-- 27–30. NDIAYE GLOBAL SERVICES -->
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-01.jpg', 'NGS · Présentation du logotype', '#')">
-        <img src="assets/images/project-ngs-brand-01.jpg" alt="Logotype Ndiaye Global Services sur papier" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-01.jpg', 'NGS · Présentation du logotype', 'project.html?id=ngs')">
+        <img src="assets/images/optimized/project-ngs-brand-01-1280.webp" srcset="assets/images/optimized/project-ngs-brand-01-640.webp 640w, assets/images/optimized/project-ngs-brand-01-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="853" alt="Logotype Ndiaye Global Services sur papier" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Branding · Logo</span><div class="mosaic-bottom-info"><span class="mosaic-title">NGS · Logotype</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-02.jpg', 'NGS · Déclinaison sur mugs', '#')">
-        <img src="assets/images/project-ngs-brand-02.jpg" alt="Identité Ndiaye Global Services appliquée sur des mugs" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-02.jpg', 'NGS · Déclinaison sur mugs', 'project.html?id=ngs')">
+        <img src="assets/images/optimized/project-ngs-brand-02-1280.webp" srcset="assets/images/optimized/project-ngs-brand-02-640.webp 640w, assets/images/optimized/project-ngs-brand-02-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="1024" alt="Identité Ndiaye Global Services appliquée sur des mugs" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Branding · Supports</span><div class="mosaic-bottom-info"><span class="mosaic-title">NGS · Mugs</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-03.jpg', 'NGS · Signalétique extérieure', '#')">
-        <img src="assets/images/project-ngs-brand-03.jpg" alt="Identité Ndiaye Global Services sur façade corporate" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-03.jpg', 'NGS · Signalétique extérieure', 'project.html?id=ngs')">
+        <img src="assets/images/optimized/project-ngs-brand-03-1280.webp" srcset="assets/images/optimized/project-ngs-brand-03-640.webp 640w, assets/images/optimized/project-ngs-brand-03-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="880" alt="Identité Ndiaye Global Services sur façade corporate" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Branding · Signalétique</span><div class="mosaic-bottom-info"><span class="mosaic-title">NGS · Façade</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-04.jpg', 'NGS · Plaque professionnelle', '#')">
-        <img src="assets/images/project-ngs-brand-04.jpg" alt="Plaque professionnelle Ndiaye Global Services" loading="lazy" decoding="async">
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-ngs-brand-04.jpg', 'NGS · Plaque professionnelle', 'project.html?id=ngs')">
+        <img src="assets/images/optimized/project-ngs-brand-04-1280.webp" srcset="assets/images/optimized/project-ngs-brand-04-640.webp 640w, assets/images/optimized/project-ngs-brand-04-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="896" alt="Plaque professionnelle Ndiaye Global Services" loading="lazy" decoding="async">
         <div class="mosaic-overlay"><span class="mosaic-top-pill">Identité · Corporate</span><div class="mosaic-bottom-info"><span class="mosaic-title">NGS · Plaque</span><span class="mosaic-zoom-icon">↗</span></div></div>
       </div>
 
       <!-- 31–36. CRÉATIONS DIGITALES -->
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-01.avif', 'Création digitale · Série 01', '#')"><img src="assets/images/project-digital-01.avif" alt="Création graphique digitale Baol Vision série 1" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 01</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-02.avif', 'Création digitale · Série 02', '#')"><img src="assets/images/project-digital-02.avif" alt="Création graphique digitale Baol Vision série 2" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 02</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-03.avif', 'Création digitale · Série 03', '#')"><img src="assets/images/project-digital-03.avif" alt="Création graphique digitale Baol Vision série 3" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 03</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-04.avif', 'Création digitale · Série 04', '#')"><img src="assets/images/project-digital-04.avif" alt="Création graphique digitale Baol Vision série 4" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 04</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-05.avif', 'Création digitale · Série 05', '#')"><img src="assets/images/project-digital-05.avif" alt="Création graphique digitale Baol Vision série 5" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 05</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
-      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-social-media.png', 'Social Media · Création graphique', '#')"><img src="assets/images/project-social-media.png" alt="Création graphique pour les réseaux sociaux" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Social Media</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création réseaux sociaux</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-01.avif', 'Création digitale · Série 01', '#')"><img src="assets/images/optimized/project-digital-01-1280.webp" srcset="assets/images/optimized/project-digital-01-640.webp 640w, assets/images/optimized/project-digital-01-1280.webp 1024w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1024" height="1024" alt="Création graphique digitale Baol Vision série 1" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 01</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-02.avif', 'Création digitale · Série 02', '#')"><img src="assets/images/optimized/project-digital-02-1280.webp" srcset="assets/images/optimized/project-digital-02-640.webp 640w, assets/images/optimized/project-digital-02-1280.webp 1264w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1264" height="848" alt="Création graphique digitale Baol Vision série 2" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 02</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-03.avif', 'Création digitale · Série 03', '#')"><img src="assets/images/optimized/project-digital-03-1280.webp" srcset="assets/images/optimized/project-digital-03-640.webp 640w, assets/images/optimized/project-digital-03-1280.webp 1264w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1264" height="848" alt="Création graphique digitale Baol Vision série 3" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 03</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-04.avif', 'Création digitale · Série 04', '#')"><img src="assets/images/optimized/project-digital-04-1280.webp" srcset="assets/images/optimized/project-digital-04-640.webp 640w, assets/images/optimized/project-digital-04-1280.webp 1264w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1264" height="848" alt="Création graphique digitale Baol Vision série 4" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 04</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-digital-05.avif', 'Création digitale · Série 05', '#')"><img src="assets/images/optimized/project-digital-05-1280.webp" srcset="assets/images/optimized/project-digital-05-640.webp 640w, assets/images/optimized/project-digital-05-1280.webp 1280w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1280" height="714" alt="Création graphique digitale Baol Vision série 5" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Digital · Création</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création digitale 05</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
+      <div class="mosaic-item" data-cat="digital" onclick="openPortfolioModal('assets/images/project-social-media.png', 'Social Media · Création graphique', '#')"><img src="assets/images/optimized/project-social-media-1280.webp" srcset="assets/images/optimized/project-social-media-640.webp 640w, assets/images/optimized/project-social-media-1280.webp 1080w" sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw" width="1080" height="1080" alt="Création graphique pour les réseaux sociaux" loading="lazy" decoding="async"><div class="mosaic-overlay"><span class="mosaic-top-pill">Social Media</span><div class="mosaic-bottom-info"><span class="mosaic-title">Création réseaux sociaux</span><span class="mosaic-zoom-icon">↗</span></div></div></div>
     </div>
   </section>
 
@@ -3483,6 +3507,32 @@ body.theme-white .cursor-trail {
     </div>
   </section>
 
+  <section class="client-proof wrap" aria-labelledby="clients-title">
+    <div class="section-header-block">
+      <span class="section-tag">Références visibles</span>
+      <h2 class="section-title-large" id="clients-title">Des identités et campagnes conçues pour des projets d’ici et d’ailleurs.</h2>
+      <p style="max-width:68ch;color:var(--text-muted);margin-top:1rem;">Une sélection de projets à découvrir : campagnes, identité visuelle, édition et packaging.</p>
+    </div>
+    <div class="client-proof-grid" aria-label="Sélection de marques accompagnées">
+      <a class="client-proof-name" href="project.html?id=setrans">SET-TRANS ↗</a><a class="client-proof-name" href="project.html?id=sanofi-urgest">SANOFI · URGEST ↗</a>
+      <a class="client-proof-name" href="project.html?id=prizent">PRIZENT ↗</a><a class="client-proof-name" href="project.html?id=vacrea">VACREA ↗</a>
+      <a class="client-proof-name" href="project.html?id=cass-online">CASS ONLINE ↗</a><a class="client-proof-name" href="project.html?id=ngs">NGS ↗</a>
+      <a class="client-proof-name" href="project.html?id=khelcom">KHELCOM ↗</a><a class="client-proof-name" href="project.html?id=graphia">GRAPHIA ↗</a>
+    </div>
+  </section>
+
+  <section class="local-seo wrap" aria-labelledby="local-title">
+    <div class="section-header-block">
+      <span class="section-tag">Touba · Sénégal · À distance</span>
+      <h2 class="section-title-large" id="local-title">Direction artistique et création d’identité visuelle au Sénégal.</h2>
+    </div>
+    <div class="local-seo-grid">
+      <article class="local-seo-card"><h3>Vous cherchez un graphiste à Touba&nbsp;?</h3><p>Je conçois affiches, brochures, packaging et contenus digitaux depuis Touba, avec un accompagnement direct de la définition du besoin à la livraison.</p></article>
+      <article class="local-seo-card"><h3>Travaillez-vous partout au Sénégal&nbsp;?</h3><p>Oui. Les échanges, validations et livraisons peuvent être organisés à distance pour Dakar et toutes les régions du Sénégal.</p></article>
+      <article class="local-seo-card"><h3>Que comprend une identité visuelle&nbsp;?</h3><p>Selon le projet : logo, palette, typographies, règles d’utilisation, applications de marque et fichiers prêts pour le print et le digital.</p></article>
+    </div>
+  </section>
+
   <!-- ═════════════════════════════════════════════════════════════════
        SECTION CONTACT PLEIN ÉCRAN ("HAVE A PROJECT?")
        ═════════════════════════════════════════════════════════════════ -->
@@ -3546,7 +3596,13 @@ body.theme-white .cursor-trail {
 
       <!-- Formulaire Contact Interactif -->
       <form class="contact-form-apex" id="contact-form" novalidate>
-        <p class="form-note">Après validation, votre message prérempli s'ouvrira dans WhatsApp. Rien n'est envoyé automatiquement.</p>
+        <p class="form-note" id="form-availability">Préparez votre demande ici ou contactez-moi directement sur WhatsApp.</p>
+        <div class="form-group-apex">
+          <label class="label-apex" for="f-email">Votre Email *</label>
+          <input type="email" id="f-email" class="input-apex" placeholder="Ex: vous@entreprise.com" autocomplete="email" required>
+          <p class="form-error" id="error-email" aria-live="polite"></p>
+        </div>
+
         <div class="form-group-apex">
           <label class="label-apex" for="f-name">Votre Nom &amp; Prénom *</label>
           <input type="text" id="f-name" class="input-apex" placeholder="Ex: Mamadou Diop" required>
@@ -3571,8 +3627,12 @@ body.theme-white .cursor-trail {
           <p class="form-error" id="error-msg" aria-live="polite"></p>
         </div>
 
+        <div class="hp-field" aria-hidden="true"><label for="f-website">Site web</label><input id="f-website" type="text" tabindex="-1" autocomplete="off"></div>
+        <p class="legal-consent">En envoyant ce formulaire, vous acceptez l’utilisation de vos coordonnées pour répondre à votre demande. Consultez notre <a href="confidentialite.html">politique de confidentialité</a>.</p>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+
         <button type="submit" class="btn-submit-apex" data-magnetic>
-          <span>Envoyer ma demande via WhatsApp →</span>
+          <span>Envoyer ma demande →</span>
         </button>
       </form>
     </div>
@@ -3615,6 +3675,8 @@ body.theme-white .cursor-trail {
           <li><a href="mailto:contact.baolvision@gmail.com">Email professionnel ↗</a></li>
           <li><a href="tel:+221773033196">+221 77 303 31 96</a></li>
           <li><a href="https://www.behance.net/cheikhdiop16" target="_blank" rel="noopener">Behance ↗</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
         </ul>
       </div>
     </div>
@@ -3622,6 +3684,7 @@ body.theme-white .cursor-trail {
     <div class="footer-bottom">
       <span>© 2026 Cheikh Awa Balla Diop. Tous droits réservés.</span>
       <span class="footer-signature">Conçu à Touba · Sénégal</span>
+      <span><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></span>
       <a class="footer-back-top" href="#accueil">Retour en haut ↑</a>
     </div>
   </div>
@@ -3895,22 +3958,35 @@ window.copyContactEmail = function() {
   });
 };
 
-/* 10. Formulaire de Contact vers WhatsApp */
+/* 10. Formulaire de contact relié au service email */
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', e => {
+  let emailAvailable = false;
+  const submitLabel = contactForm.querySelector('button[type="submit"] span');
+  submitLabel.textContent = 'Continuer sur WhatsApp →';
+  fetch('/api/contact').then(response => response.ok ? response.json() : {}).then(data => {
+    emailAvailable = data.available === true;
+    document.getElementById('form-availability').textContent = emailAvailable
+      ? 'Envoyez votre demande par email. Une confirmation apparaîtra lorsque le service aura accepté l’envoi.'
+      : 'Votre demande sera préparée dans WhatsApp. Vous pourrez la relire avant de l’envoyer.';
+    submitLabel.textContent = emailAvailable ? 'Envoyer ma demande →' : 'Continuer sur WhatsApp →';
+  }).catch(() => {});
+  contactForm.addEventListener('submit', async e => {
     e.preventDefault();
+    if (contactForm.querySelector('button[type="submit"]').disabled) return;
     const name = document.getElementById("f-name")?.value.trim() || "";
+    const email = document.getElementById("f-email")?.value.trim() || "";
     const phone = document.getElementById("f-phone")?.value.trim() || "";
     const srv = document.getElementById("f-service")?.value.trim() || "";
     const msg = document.getElementById("f-msg")?.value.trim() || "";
-    const values = { name, phone, service: srv, msg };
-    const labels = { name: 'Indiquez votre nom.', phone: 'Indiquez votre numéro WhatsApp.', service: 'Précisez la prestation souhaitée.', msg: 'Décrivez votre projet.' };
+    const website = document.getElementById("f-website")?.value || "";
+    const values = { name, email, phone, service: srv, msg };
+    const labels = { name: 'Indiquez votre nom.', email: 'Indiquez un email valide.', phone: 'Indiquez votre numéro WhatsApp.', service: 'Précisez la prestation souhaitée.', msg: 'Décrivez votre projet.' };
     let firstInvalid = null;
     Object.entries(values).forEach(([key, value]) => {
       const input = document.getElementById(`f-${key}`);
       const error = document.getElementById(`error-${key}`);
-      const invalid = !value;
+      const invalid = !value || (key === 'email' && !/^\S+@\S+\.\S+$/.test(value));
       input?.setAttribute('aria-invalid', String(invalid));
       if (error) error.textContent = invalid ? labels[key] : '';
       if (invalid && !firstInvalid) firstInvalid = input;
@@ -3919,10 +3995,36 @@ if (contactForm) {
       firstInvalid.focus();
       return;
     }
-    const text = encodeURIComponent(`Bonjour Cheikh Awa Balla Diop,\nJe m'appelle ${name} (${phone}).\nPrestation : ${srv}\nProjet : ${msg}`);
-    window.open(`https://wa.me/221773033196?text=${text}`, '_blank');
+    if (!emailAvailable) {
+      const text = encodeURIComponent(`Bonjour Cheikh Awa Balla Diop,\nJe m'appelle ${name} (${phone}, ${email}).\nPrestation : ${srv}\nProjet : ${msg}`);
+      window.open(`https://wa.me/221773033196?text=${text}`, '_blank', 'noopener');
+      window.va?.('event', { name:'whatsapp_click' });
+      return;
+    }
+    const submit = contactForm.querySelector('button[type="submit"]');
+    const status = document.getElementById('form-status');
+    submit.disabled = true;
+    submit.querySelector('span').textContent = 'Envoi en cours…';
+    status.className = 'form-status'; status.textContent = '';
+    try {
+      const response = await fetch('/api/contact', { method:'POST', signal:AbortSignal.timeout(20000), headers:{'Content-Type':'application/json'}, body:JSON.stringify({ name, email, phone, service:srv, message:msg, website }) });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(data.error || "L'envoi n'a pas abouti.");
+      status.className = 'form-status success';
+      status.textContent = 'Merci ! Votre demande a bien été envoyée. Je vous répondrai rapidement.';
+      contactForm.reset();
+      window.va?.('event', { name:'contact_sent' });
+    } catch (error) {
+      const text = encodeURIComponent(`Bonjour Cheikh Awa Balla Diop,\nJe m'appelle ${name} (${phone}, ${email}).\nPrestation : ${srv}\nProjet : ${msg}`);
+      status.className = 'form-status error';
+      status.innerHTML = `L'email n'a pas pu partir. <a href="https://wa.me/221773033196?text=${text}" target="_blank" rel="noopener" style="text-decoration:underline">Envoyer plutôt sur WhatsApp</a>.`;
+    } finally {
+      submit.disabled = false;
+      submit.querySelector('span').textContent = 'Envoyer ma demande →';
+    }
   });
 }
+
 
 /* 11. Gestion du Thème Blanc & Orange / Sombre */
 (function initTheme() {
@@ -4000,7 +4102,7 @@ if (contactForm) {
 <div class="portfolio-lightbox" id="portfolio-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-project-title" onclick="closePortfolioModal()">
   <button class="lightbox-exit-btn" type="button" aria-label="Fermer l'aperçu" onclick="closePortfolioModal()">✕</button>
   <div class="lightbox-dialog" onclick="event.stopPropagation()">
-    <img src="" alt="Aperçu grand format" class="lightbox-main-img" id="lightbox-main-img">
+    <img src="assets/images/optimized/project-prizent-640.webp" alt="Aperçu grand format" class="lightbox-main-img" id="lightbox-main-img">
     <div class="lightbox-footer-bar">
       <span id="lightbox-project-title">Titre du projet</span>
       <a href="#" id="lightbox-project-btn" class="lightbox-action-btn">Explorer l'étude de cas →</a>
