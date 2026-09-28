@@ -3,7 +3,7 @@
 const clients = [
   { id: 'bkk', name: 'Boutique Keur Khadim', logo: '' },
   { id: 'bio-mbacke', name: 'Bio Mbacké', logo: '' },
-  { id: 'porokhane-soow', name: 'Porokhane Soow', logo: '' },
+  { id: 'porokhane-soow', name: 'Porokhane Soow', logo: 'assets/clients/porokhane-soow.jpg' },
   { id: 'baol-office', name: 'Baol Office', logo: '' },
   { id: 'eldasy', name: 'Restaurant Eldasy', logo: 'assets/clients/restaurant-eldasy.jpg' },
   { id: 'tawefekh', name: 'Tawefekh Immobilier', logo: '' },
@@ -22,6 +22,7 @@ function renderClientLogo(client) {
   card.dataset.client = client.id;
 
   const fallback = () => {
+    card.classList.remove('client-logo-card--image');
     const name = document.createElement('span');
     name.textContent = client.name;
     card.replaceChildren(name);
@@ -33,6 +34,7 @@ function renderClientLogo(client) {
   }
 
   const logo = document.createElement('img');
+  card.classList.add('client-logo-card--image');
   logo.src = client.logo;
   logo.alt = `Logo de ${client.name}`;
   logo.width = 130;

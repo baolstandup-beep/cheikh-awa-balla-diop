@@ -2481,8 +2481,8 @@ body.theme-white .cursor-trail {
 .client-logo-group { display:flex; gap:32px; flex:none; padding-right:32px; }
 .client-logo-card { width:180px; height:110px; flex:none; display:flex; align-items:center; justify-content:center; padding:22px; border:1px solid #ECECEC; border-radius:16px; background:#fff; color:#252525; text-align:center; transition:transform .3s ease,box-shadow .3s ease; }
 .client-logo-card img { display:block; max-width:130px; max-height:65px; width:auto; height:auto; object-fit:contain; filter:grayscale(1); opacity:.68; transition:filter .3s ease,opacity .3s ease; }
-.client-logo-card:is([data-client="quincaillerie-mouridoula"],[data-client="eldasy"]) { width:220px; padding:8px; }
-.client-logo-card:is([data-client="quincaillerie-mouridoula"],[data-client="eldasy"]) img { max-width:200px; max-height:92px; filter:none; opacity:1; }
+.client-logo-card--image { width:220px; padding:8px; }
+.client-logo-card--image img { max-width:200px; max-height:92px; filter:none; opacity:1; }
 .client-logo-card span { font-size:.88rem; font-weight:800; line-height:1.25; letter-spacing:-.02em; overflow-wrap:anywhere; }
 .client-logo-card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,.09); }
 .client-logo-card:hover img { filter:none; opacity:1; }
@@ -2499,7 +2499,7 @@ body.theme-white .cursor-trail {
 @media (max-width:860px) { .client-proof { padding-inline:1.5rem; } }
 @media (max-width:760px) { .client-proof-header,.client-proof-cta { flex-direction:column; gap:1.5rem; } .client-proof-count { min-width:0; } }
 @media (max-width:520px) { .client-proof { padding-block:4rem; } .client-logo-group { gap:20px; padding-right:20px; } .client-logo-card { width:135px; height:85px; padding:12px; border-radius:12px; } .client-logo-card img { max-width:105px; max-height:55px; } .client-logo-card span { font-size:.76rem; } .client-proof-actions { width:100%; } .client-proof-actions a { flex:1 1 100%; } }
-@media (max-width:520px) { .client-logo-card:is([data-client="quincaillerie-mouridoula"],[data-client="eldasy"]) { width:170px; padding:7px; } .client-logo-card:is([data-client="quincaillerie-mouridoula"],[data-client="eldasy"]) img { max-width:156px; max-height:71px; } }
+@media (max-width:520px) { .client-logo-card--image { width:170px; padding:7px; } .client-logo-card--image img { max-width:156px; max-height:71px; } }
 @media (prefers-reduced-motion:reduce) { .client-logo-viewport { overflow:visible; -webkit-mask-image:none; mask-image:none; } .client-logo-track { width:auto; animation:none; will-change:auto; } .client-logo-group { flex-wrap:wrap; width:100%; padding-right:0; } .client-logo-group[aria-hidden="true"] { display:none; } .client-logo-card,.client-logo-card img,.client-proof-actions a { transition:none; } }
 .testimonials { padding:6rem 0; border-bottom:1px solid var(--border); }
 .testimonials-intro { max-width:65ch; color:var(--text-muted); margin:1rem 0 2.5rem; }
