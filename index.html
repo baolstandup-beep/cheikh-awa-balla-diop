@@ -2467,6 +2467,15 @@ body.theme-white .cursor-trail {
 .trust-card strong { display: block; color: var(--text-main); font-size: 1.05rem; margin-bottom: .65rem; }
 .trust-card p { color: var(--text-muted); font-size: .95rem; }
 .client-proof { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+.testimonials { padding:6rem 0; border-bottom:1px solid var(--border); }
+.testimonials-intro { max-width:65ch; color:var(--text-muted); margin:1rem 0 2.5rem; }
+.testimonials-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
+.testimonial-placeholder { min-width:0; padding:2rem; border:1px solid var(--border); border-radius:12px; background:var(--bg-card); }
+.testimonial-placeholder h3 { color:var(--text-main); font-size:1.1rem; margin-bottom:1rem; }
+.testimonial-placeholder p { color:var(--text-muted); font-size:.94rem; line-height:1.65; }
+.testimonial-placeholder footer { margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--text-muted); font-size:.8rem; }
+@media(max-width:1000px) { .testimonials-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:600px) { .testimonials { padding:4rem 0; } .testimonials-grid { grid-template-columns:minmax(0,1fr); } .testimonial-placeholder { padding:1.5rem; } }
 .contact-apex-layout > *, .footer-main > *, .local-seo-grid > * { min-width:0; }
 .channel-val { overflow-wrap:anywhere; }
 .client-proof-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border); }
@@ -3518,6 +3527,19 @@ body.theme-white .cursor-trail {
       <a class="client-proof-name" href="project.html?id=prizent">PRIZENT ↗</a><a class="client-proof-name" href="project.html?id=vacrea">VACREA ↗</a>
       <a class="client-proof-name" href="project.html?id=cass-online">CASS ONLINE ↗</a><a class="client-proof-name" href="project.html?id=ngs">NGS ↗</a>
       <a class="client-proof-name" href="project.html?id=khelcom">KHELCOM ↗</a><a class="client-proof-name" href="project.html?id=graphia">GRAPHIA ↗</a>
+    </div>
+  </section>
+
+  <section class="testimonials wrap" id="temoignages" aria-labelledby="testimonials-title">
+    <h2 class="section-title-large" id="testimonials-title">Témoignages clients</h2>
+    <p class="testimonials-intro">Cette section accueillera six retours clients authentiques. Les emplacements ci-dessous sont à compléter : aucun avis n’est encore publié.</p>
+    <div class="testimonials-grid">
+      <article class="testimonial-placeholder"><h3>Témoignage 1 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+      <article class="testimonial-placeholder"><h3>Témoignage 2 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+      <article class="testimonial-placeholder"><h3>Témoignage 3 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+      <article class="testimonial-placeholder"><h3>Témoignage 4 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+      <article class="testimonial-placeholder"><h3>Témoignage 5 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+      <article class="testimonial-placeholder"><h3>Témoignage 6 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
     </div>
   </section>
 
