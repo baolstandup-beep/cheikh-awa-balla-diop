@@ -1,17 +1,16 @@
 // Replace each empty logo value with the path to an approved client logo.
 // The names are shown as typographic stand-ins until individual logo files are supplied.
 const clients = [
-  { id: 'bkk', name: 'Boutique Keur Khadim', logo: '' },
   { id: 'bio-mbacke', name: 'Bio Mbacké', logo: '' },
   { id: 'porokhane-soow', name: 'Porokhane Soow', logo: 'assets/clients/porokhane-soow.jpg' },
   { id: 'baol-office', name: 'Baol Office', logo: '' },
   { id: 'eldasy', name: 'Restaurant Eldasy', logo: 'assets/clients/restaurant-eldasy.jpg' },
-  { id: 'tawefekh', name: 'Tawefekh Immobilier', logo: '' },
+  { id: 'camusat', name: 'Camusat', logo: 'assets/clients/camusat.jpg' },
   { id: 'quincaillerie-mouridoula', name: 'Quincaillerie Mouridoulla', logo: 'assets/clients/quincaillerie-mouridoulla.jpg' },
-  { id: 'touba-securite', name: 'Touba Sécurité Électronique', logo: '' },
+  { id: 'bkk', name: 'Boutique Keur Khadim', logo: 'assets/clients/boutique-keur-khadim.jpg' },
   { id: 'khelcom', name: 'KhelCom', logo: '' },
   { id: 'darou-salam', name: 'Darou Salam Multiservices', logo: '' },
-  { id: 'ngabou', name: 'Ngabou Services', logo: '' },
+  { id: 'mbeete-mi', name: 'Mbeeté mi', logo: 'assets/clients/mbeete-mi.jpg' },
   { id: 'ctm', name: 'CTM — Commune de Touba Mosquée', logo: 'assets/clients/ctm-commune-touba-mosquee.jpg' }
 ];
 
