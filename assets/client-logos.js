@@ -5,7 +5,7 @@ const clients = [
   { id: 'bio-mbacke', name: 'Bio Mbacké', logo: '' },
   { id: 'porokhane-soow', name: 'Porokhane Soow', logo: '' },
   { id: 'baol-office', name: 'Baol Office', logo: '' },
-  { id: 'eldasy', name: 'Restaurant Eldasy', logo: '' },
+  { id: 'eldasy', name: 'Restaurant Eldasy', logo: 'assets/clients/restaurant-eldasy.jpg' },
   { id: 'tawefekh', name: 'Tawefekh Immobilier', logo: '' },
   { id: 'quincaillerie-mouridoula', name: 'Quincaillerie Mouridoulla', logo: 'assets/clients/quincaillerie-mouridoulla.jpg' },
   { id: 'touba-securite', name: 'Touba Sécurité Électronique', logo: '' },
