@@ -1,0 +1,69 @@
+// Replace each empty logo value with the path to an approved client logo.
+// The names are shown as typographic stand-ins until individual logo files are supplied.
+const clients = [
+  { id: 'bkk', name: 'Boutique Keur Khadim', logo: '' },
+  { id: 'bio-mbacke', name: 'Bio Mbacké', logo: '' },
+  { id: 'porokhane-soow', name: 'Porokhane Soow', logo: '' },
+  { id: 'baol-office', name: 'Baol Office', logo: '' },
+  { id: 'eldasy', name: 'Restaurant Eldasy', logo: '' },
+  { id: 'tawefekh', name: 'Tawefekh Immobilier', logo: '' },
+  { id: 'quincaillerie-mouridoula', name: 'Quincaillerie Mouridoula', logo: '' },
+  { id: 'touba-securite', name: 'Touba Sécurité Électronique', logo: '' },
+  { id: 'khelcom', name: 'KhelCom', logo: '' },
+  { id: 'darou-salam', name: 'Darou Salam Multiservices', logo: '' },
+  { id: 'ngabou', name: 'Ngabou Services', logo: '' },
+  { id: 'math-computer', name: 'Math Computer', logo: '' }
+];
+
+function renderClientLogo(client) {
+  const card = document.createElement('div');
+  card.className = 'client-logo-card';
+  card.setAttribute('role', 'listitem');
+  card.dataset.client = client.id;
+
+  const fallback = () => {
+    const name = document.createElement('span');
+    name.textContent = client.name;
+    card.replaceChildren(name);
+  };
+
+  if (!client.logo) {
+    fallback();
+    return card;
+  }
+
+  const logo = document.createElement('img');
+  logo.src = client.logo;
+  logo.alt = `Logo de ${client.name}`;
+  logo.width = 130;
+  logo.height = 65;
+  logo.loading = 'lazy';
+  logo.decoding = 'async';
+  logo.addEventListener('error', fallback, { once: true });
+  card.append(logo);
+  return card;
+}
+
+function renderClientLogos() {
+  const track = document.getElementById('client-logo-track');
+  if (!track || !clients.length) return;
+
+  const marqueeClients = [...clients, ...clients];
+  const groups = [0, 1].map((copy) => {
+    const group = document.createElement('div');
+    group.className = 'client-logo-group';
+    group.setAttribute('role', 'list');
+    if (copy) group.setAttribute('aria-hidden', 'true');
+    marqueeClients.slice(copy * clients.length, (copy + 1) * clients.length)
+      .forEach((client) => group.append(renderClientLogo(client)));
+    return group;
+  });
+
+  track.replaceChildren(...groups);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', renderClientLogos, { once: true });
+} else {
+  renderClientLogos();
+}

@@ -17,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#080808">
 <script defer src="assets/analytics.js"></script>
+<script defer src="assets/client-logos.js"></script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><text x='50%25' y='55%25' font-family='sans-serif' font-size='13' fill='%23FF5E1A' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>CD</text></svg>">
 
 <!-- Google Fonts : Plus Jakarta Sans (Titres), Inter (Corps), IBM Plex Mono (Technique) -->
@@ -2466,7 +2467,37 @@ body.theme-white .cursor-trail {
 .trust-card { background: var(--bg-main); padding: 2rem; }
 .trust-card strong { display: block; color: var(--text-main); font-size: 1.05rem; margin-bottom: .65rem; }
 .trust-card p { color: var(--text-muted); font-size: .95rem; }
-.client-proof { padding: 6rem 0; border-bottom: 1px solid var(--border); }
+.client-proof { padding: 6rem 3rem; border-bottom: 1px solid var(--border); }
+.client-proof-header { display:flex; align-items:end; justify-content:space-between; gap:3rem; }
+.client-proof .section-header-block { margin-bottom:2.5rem; }
+.client-proof .section-title-large { max-width:18ch; }
+.client-proof-intro { max-width:62ch; color:var(--text-muted); margin-top:1.25rem; }
+.client-proof-count { flex:none; min-width:13rem; padding-bottom:.25rem; }
+.client-proof-count strong { display:block; color:var(--text-main); font-size:clamp(3.5rem,6vw,5.5rem); line-height:1; letter-spacing:-.04em; }
+.client-proof-count span { display:block; color:var(--text-muted); font-size:.83rem; line-height:1.45; margin-top:.5rem; }
+.client-proof-services { color:var(--text-muted); font-size:.8rem; font-weight:600; letter-spacing:.03em; margin-bottom:1.5rem; }
+.client-logo-viewport { overflow:hidden; max-width:100%; -webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent); mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent); }
+.client-logo-track { display:flex; width:max-content; animation:clientLogoMarquee 42s linear infinite; will-change:transform; }
+.client-logo-group { display:flex; gap:32px; flex:none; padding-right:32px; }
+.client-logo-card { width:180px; height:110px; flex:none; display:flex; align-items:center; justify-content:center; padding:22px; border:1px solid #ECECEC; border-radius:16px; background:#fff; color:#252525; text-align:center; transition:transform .3s ease,box-shadow .3s ease; }
+.client-logo-card img { display:block; max-width:130px; max-height:65px; width:auto; height:auto; object-fit:contain; filter:grayscale(1); opacity:.68; transition:filter .3s ease,opacity .3s ease; }
+.client-logo-card span { font-size:.88rem; font-weight:800; line-height:1.25; letter-spacing:-.02em; overflow-wrap:anywhere; }
+.client-logo-card:hover { transform:translateY(-4px); box-shadow:0 12px 28px rgba(0,0,0,.09); }
+.client-logo-card:hover img { filter:none; opacity:1; }
+.client-proof-cta { display:flex; justify-content:space-between; align-items:center; gap:2rem; margin-top:3.5rem; padding-top:2rem; border-top:1px solid var(--border); }
+.client-proof-cta h3 { color:var(--text-main); font-size:clamp(1.35rem,2vw,1.8rem); line-height:1.2; letter-spacing:-.025em; }
+.client-proof-cta p { margin-top:.5rem; color:var(--text-muted); font-size:.92rem; }
+.client-proof-actions { display:flex; flex-wrap:wrap; gap:.75rem; }
+.client-proof-actions a { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:.8rem 1.2rem; border-radius:6px; border:1px solid var(--border-strong); color:var(--text-main); font-size:.83rem; font-weight:700; white-space:nowrap; transition:transform .2s ease,background .2s ease; }
+.client-proof-actions a:first-child { background:var(--text-main); color:var(--bg-main); border-color:var(--text-main); }
+.client-proof-actions a:hover { transform:translateY(-2px); }
+@keyframes clientLogoMarquee { to { transform:translateX(-50%); } }
+@media (hover:hover) { .client-logo-viewport:hover .client-logo-track { animation-play-state:paused; } }
+@media (max-width:1024px) { .client-proof-header,.client-proof-cta { align-items:start; } .client-logo-group { gap:28px; padding-right:28px; } .client-logo-card { width:160px; height:100px; } }
+@media (max-width:860px) { .client-proof { padding-inline:1.5rem; } }
+@media (max-width:760px) { .client-proof-header,.client-proof-cta { flex-direction:column; gap:1.5rem; } .client-proof-count { min-width:0; } }
+@media (max-width:520px) { .client-proof { padding-block:4rem; } .client-logo-group { gap:20px; padding-right:20px; } .client-logo-card { width:135px; height:85px; padding:12px; border-radius:12px; } .client-logo-card img { max-width:105px; max-height:55px; } .client-logo-card span { font-size:.76rem; } .client-proof-actions { width:100%; } .client-proof-actions a { flex:1 1 100%; } }
+@media (prefers-reduced-motion:reduce) { .client-logo-viewport { overflow:visible; -webkit-mask-image:none; mask-image:none; } .client-logo-track { width:auto; animation:none; will-change:auto; } .client-logo-group { flex-wrap:wrap; width:100%; padding-right:0; } .client-logo-group[aria-hidden="true"] { display:none; } .client-logo-card,.client-logo-card img,.client-proof-actions a { transition:none; } }
 .testimonials { padding:6rem 0; border-bottom:1px solid var(--border); }
 .testimonials-intro { max-width:65ch; color:var(--text-muted); margin:1rem 0 2.5rem; }
 .testimonials-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
@@ -2478,9 +2509,6 @@ body.theme-white .cursor-trail {
 @media(max-width:600px) { .testimonials { padding:4rem 0; } .testimonials-grid { grid-template-columns:minmax(0,1fr); } .testimonial-placeholder { padding:1.5rem; } }
 .contact-apex-layout > *, .footer-main > *, .local-seo-grid > * { min-width:0; }
 .channel-val { overflow-wrap:anywhere; }
-.client-proof-grid { display:grid; grid-template-columns:repeat(4,1fr); border:1px solid var(--border); }
-.client-proof-name { min-height:110px; display:flex; align-items:center; justify-content:center; padding:1.5rem; border-right:1px solid var(--border); border-bottom:1px solid var(--border); color:var(--text-main); font-weight:800; text-align:center; letter-spacing:-.02em; }
-.client-proof-name:nth-child(4n) { border-right:0; }
 .local-seo { padding:6rem 0; border-bottom:1px solid var(--border); }
 .local-seo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
 .local-seo-card { padding:2rem; background:var(--bg-card); border:1px solid var(--border); border-radius:8px; }
@@ -2493,15 +2521,13 @@ body.theme-white .cursor-trail {
 .legal-consent a { color:var(--accent); text-decoration:underline; }
 @media (max-width: 760px) {
   .trust-grid { grid-template-columns: 1fr; }
-  .client-proof-grid, .local-seo-grid { grid-template-columns:1fr 1fr; }
-  .client-proof-name:nth-child(odd) { border-right:1px solid var(--border); }
-  .client-proof-name:nth-child(even) { border-right:0; }
+  .local-seo-grid { grid-template-columns:1fr 1fr; }
   .header-nav { padding-inline: 1rem; }
   .nav-brand > span:nth-child(2) { max-width: 12ch; line-height: 1.1; }
   .btn-nav-contact, .btn-theme-toggle span:last-child { display: none; }
   .hero-section { padding-top: 8rem; }
 }
-@media (max-width: 520px) { .client-proof-grid, .local-seo-grid { grid-template-columns:1fr; } .client-proof-name { border-right:0!important; } }
+@media (max-width: 520px) { .local-seo-grid { grid-template-columns:1fr; } }
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://cabd-portfolio.vercel.app/#person","name":"Cheikh Awa Balla Diop","jobTitle":"Directeur artistique et designer graphique","url":"https://cabd-portfolio.vercel.app/","worksFor":{"@id":"https://cabd-portfolio.vercel.app/#business"},"address":{"@type":"PostalAddress","addressLocality":"Touba","addressCountry":"SN"},"sameAs":["https://www.behance.net/cheikhdiop16"]},{"@type":"ProfessionalService","@id":"https://cabd-portfolio.vercel.app/#business","name":"Baol Vision — Cheikh Awa Balla Diop","url":"https://cabd-portfolio.vercel.app/","email":"contact.baolvision@gmail.com","telephone":"+221773033196","areaServed":[{"@type":"City","name":"Touba"},{"@type":"Country","name":"Sénégal"}],"knowsAbout":["Direction artistique","Design graphique","Identité visuelle","Branding","Packaging","UI/UX"]}]}
@@ -3050,6 +3076,25 @@ body.theme-white .cursor-trail {
     </div>
   </section>
 
+  <section class="client-proof wrap" id="clients" aria-labelledby="clients-title">
+    <div class="client-proof-header">
+      <div class="section-header-block">
+        <span class="section-tag">Ils nous font confiance</span>
+        <h2 class="section-title-large" id="clients-title">Des entreprises qui nous font confiance.</h2>
+        <p class="client-proof-intro">Au fil des projets, j’ai accompagné des entreprises, commerces, institutions et entrepreneurs dans la création de leur identité, leur communication et le développement de leur image de marque.</p>
+      </div>
+      <div class="client-proof-count"><strong>+30</strong><span>Entreprises et marques accompagnées</span></div>
+    </div>
+    <p class="client-proof-services">Design · Branding · Communication · Digital</p>
+    <div class="client-logo-viewport" role="group" aria-label="Entreprises et marques accompagnées">
+      <div class="client-logo-track" id="client-logo-track"><p>Références clients en cours de chargement.</p></div>
+    </div>
+    <div class="client-proof-cta">
+      <div><h3>Votre marque pourrait être la prochaine.</h3><p>Construisons ensemble une identité forte, professionnelle et mémorable.</p></div>
+      <div class="client-proof-actions"><a href="#contact">Démarrer un projet</a><a href="#projets">Voir mes réalisations</a></div>
+    </div>
+  </section>
+
   <!-- ═════════════════════════════════════════════════════════════════
        SECTION SKILLS & EXPERTISE
        ═════════════════════════════════════════════════════════════════ -->
@@ -3479,7 +3524,7 @@ body.theme-white .cursor-trail {
 
         <div class="stat-item">
           <div class="stat-num-row">
-            <span class="stat-value" data-counter="15">15</span>
+            <span class="stat-value" data-counter="30">30</span>
             <span class="stat-suffix">+</span>
           </div>
           <span class="stat-label">Marques Accompagnées</span>
@@ -3513,20 +3558,6 @@ body.theme-white .cursor-trail {
       <article class="trust-card"><strong>Direction claire</strong><p>Un concept créatif relié à vos objectifs, à votre public et à votre positionnement.</p></article>
       <article class="trust-card"><strong>Livrables prêts à l'emploi</strong><p>Des fichiers organisés et adaptés au print, au digital et aux réseaux sociaux.</p></article>
       <article class="trust-card"><strong>Accompagnement direct</strong><p>Un échange simple sur WhatsApp, des étapes lisibles et des retours cadrés.</p></article>
-    </div>
-  </section>
-
-  <section class="client-proof wrap" aria-labelledby="clients-title">
-    <div class="section-header-block">
-      <span class="section-tag">Références visibles</span>
-      <h2 class="section-title-large" id="clients-title">Des identités et campagnes conçues pour des projets d’ici et d’ailleurs.</h2>
-      <p style="max-width:68ch;color:var(--text-muted);margin-top:1rem;">Une sélection de projets à découvrir : campagnes, identité visuelle, édition et packaging.</p>
-    </div>
-    <div class="client-proof-grid" aria-label="Sélection de marques accompagnées">
-      <a class="client-proof-name" href="project.html?id=setrans">SET-TRANS ↗</a><a class="client-proof-name" href="project.html?id=sanofi-urgest">SANOFI · URGEST ↗</a>
-      <a class="client-proof-name" href="project.html?id=prizent">PRIZENT ↗</a><a class="client-proof-name" href="project.html?id=vacrea">VACREA ↗</a>
-      <a class="client-proof-name" href="project.html?id=cass-online">CASS ONLINE ↗</a><a class="client-proof-name" href="project.html?id=ngs">NGS ↗</a>
-      <a class="client-proof-name" href="project.html?id=khelcom">KHELCOM ↗</a><a class="client-proof-name" href="project.html?id=graphia">GRAPHIA ↗</a>
     </div>
   </section>
 
