@@ -12,7 +12,7 @@ const clients = [
   { id: 'khelcom', name: 'KhelCom', logo: '' },
   { id: 'darou-salam', name: 'Darou Salam Multiservices', logo: '' },
   { id: 'ngabou', name: 'Ngabou Services', logo: '' },
-  { id: 'math-computer', name: 'Math Computer', logo: '' }
+  { id: 'ctm', name: 'CTM — Commune de Touba Mosquée', logo: 'assets/clients/ctm-commune-touba-mosquee.jpg' }
 ];
 
 function renderClientLogo(client) {
