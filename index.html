@@ -18,6 +18,7 @@
 <meta name="theme-color" content="#080808">
 <script defer src="assets/analytics.js"></script>
 <script defer src="assets/client-logos.js"></script>
+<script defer src="assets/testimonials.js"></script>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23080808'/><text x='50%25' y='55%25' font-family='sans-serif' font-size='13' fill='%23FF5E1A' text-anchor='middle' dominant-baseline='middle' font-weight='bold'>CD</text></svg>">
 
 <!-- Google Fonts : Plus Jakarta Sans (Titres), Inter (Corps), IBM Plex Mono (Technique) -->
@@ -2501,15 +2502,22 @@ body.theme-white .cursor-trail {
 @media (max-width:520px) { .client-proof { padding-block:4rem; } .client-logo-group { gap:20px; padding-right:20px; } .client-logo-card { width:135px; height:85px; padding:12px; border-radius:12px; } .client-logo-card img { max-width:105px; max-height:55px; } .client-logo-card span { font-size:.76rem; } .client-proof-actions { width:100%; } .client-proof-actions a { flex:1 1 100%; } }
 @media (max-width:520px) { .client-logo-card--image { width:170px; padding:7px; } .client-logo-card--image img { max-width:156px; max-height:71px; } }
 @media (prefers-reduced-motion:reduce) { .client-logo-viewport { overflow:visible; -webkit-mask-image:none; mask-image:none; } .client-logo-track { width:auto; animation:none; will-change:auto; } .client-logo-group { flex-wrap:wrap; width:100%; padding-right:0; } .client-logo-group[aria-hidden="true"] { display:none; } .client-logo-card,.client-logo-card img,.client-proof-actions a { transition:none; } }
-.testimonials { padding:6rem 0; border-bottom:1px solid var(--border); }
-.testimonials-intro { max-width:65ch; color:var(--text-muted); margin:1rem 0 2.5rem; }
-.testimonials-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
-.testimonial-placeholder { min-width:0; padding:2rem; border:1px solid var(--border); border-radius:12px; background:var(--bg-card); }
-.testimonial-placeholder h3 { color:var(--text-main); font-size:1.1rem; margin-bottom:1rem; }
-.testimonial-placeholder p { color:var(--text-muted); font-size:.94rem; line-height:1.65; }
-.testimonial-placeholder footer { margin-top:2rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--text-muted); font-size:.8rem; }
-@media(max-width:1000px) { .testimonials-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-@media(max-width:600px) { .testimonials { padding:4rem 0; } .testimonials-grid { grid-template-columns:minmax(0,1fr); } .testimonial-placeholder { padding:1.5rem; } }
+.testimonials { padding:clamp(4rem,7vw,7rem) 0; background:#FAF9F7; color:#171C26; border-block:1px solid #EAE8E4; scroll-margin-top:100px; }
+.testimonials .section-title-large { color:#171C26; }
+.testimonials-intro { max-width:58ch; color:#636872; margin:1rem 0 3rem; line-height:1.75; }
+.testimonials-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.5rem; }
+.testimonial-card { position:relative; min-width:0; padding:clamp(1.5rem,2.4vw,2.25rem); border:1px solid #E8E9EB; border-radius:22px; background:#FFF; box-shadow:0 4px 20px rgba(23,28,38,.035); transition:transform 300ms ease,box-shadow 300ms ease; }
+.testimonial-card-header { padding-right:2rem; }
+.testimonial-card h3 { color:#171C26; font-size:1.08rem; font-weight:700; line-height:1.4; letter-spacing:-.025em; overflow-wrap:anywhere; }
+.testimonial-role { margin-top:.4rem; color:#656B75; font-size:.84rem; line-height:1.65; }
+.testimonial-mark { position:absolute; right:1.5rem; top:1.2rem; color:#D5DAE2; font:700 4.5rem/1 Georgia,serif; pointer-events:none; }
+.testimonial-rating { display:flex; gap:.22rem; width:fit-content; margin:1.25rem 0 1.5rem; color:#B77900; }
+.testimonial-rating svg { width:19px; height:19px; fill:currentColor; }
+.testimonial-card blockquote { margin:0; color:#444B57; font-size:.94rem; line-height:1.85; overflow-wrap:anywhere; }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) { .testimonial-card:hover { transform:translateY(-5px); box-shadow:0 16px 36px rgba(23,28,38,.09); } }
+@media(max-width:1100px) { .testimonials-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:640px) { .testimonials-grid { grid-template-columns:minmax(0,1fr); gap:1.25rem; } .testimonials-intro { margin-bottom:2rem; } }
+@media(prefers-reduced-motion:reduce) { .testimonial-card { transition:none; } }
 .contact-apex-layout > *, .footer-main > *, .local-seo-grid > * { min-width:0; }
 .channel-val { overflow-wrap:anywhere; }
 .local-seo { padding:6rem 0; border-bottom:1px solid var(--border); }
@@ -3564,16 +3572,12 @@ body.theme-white .cursor-trail {
     </div>
   </section>
 
-  <section class="testimonials wrap" id="temoignages" aria-labelledby="testimonials-title">
+  <section class="testimonials" id="temoignages" aria-labelledby="testimonials-title">
+    <div class="wrap">
     <h2 class="section-title-large" id="testimonials-title">Témoignages clients</h2>
-    <p class="testimonials-intro">Cette section accueillera six retours clients authentiques. Les emplacements ci-dessous sont à compléter : aucun avis n’est encore publié.</p>
-    <div class="testimonials-grid">
-      <article class="testimonial-placeholder"><h3>Témoignage 1 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
-      <article class="testimonial-placeholder"><h3>Témoignage 2 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
-      <article class="testimonial-placeholder"><h3>Témoignage 3 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
-      <article class="testimonial-placeholder"><h3>Témoignage 4 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
-      <article class="testimonial-placeholder"><h3>Témoignage 5 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
-      <article class="testimonial-placeholder"><h3>Témoignage 6 · À compléter</h3><p>Le retour du client sera publié ici après validation de son texte et de son autorisation.</p><footer>Nom du client et marque à renseigner</footer></article>
+    <p class="testimonials-intro">Des collaborations, des idées et des identités qui prennent vie. Mes clients vous racontent leur expérience.</p>
+    <div class="testimonials-grid" data-testimonials></div>
+    <noscript><p>Activez JavaScript pour consulter les six témoignages clients.</p></noscript>
     </div>
   </section>
 
