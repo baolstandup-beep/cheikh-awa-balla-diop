@@ -6,7 +6,7 @@ const clients = [
   { id: 'camusat', name: 'Camusat', logo: 'assets/clients/camusat.jpg' },
   { id: 'quincaillerie-mouridoula', name: 'Quincaillerie Mouridoulla', logo: 'assets/clients/quincaillerie-mouridoulla.jpg' },
   { id: 'bkk', name: 'Boutique Keur Khadim', logo: 'assets/clients/boutique-keur-khadim.jpg' },
-  { id: 'bio-mbacke', name: 'Bio Mbacké', logo: '' },
+  { id: 'bio-mbacke', name: 'Bio Mbacké', logo: 'assets/clients/bio-mbacke.jpg' },
   { id: 'baol-office', name: 'Baol Office', logo: 'assets/clients/baol-office.jpg' },
   { id: 'mbeete-mi', name: 'Mbeeté mi', logo: 'assets/clients/mbeete-mi.jpg' },
   { id: 'ctm', name: 'CTM — Commune de Touba Mosquée', logo: 'assets/clients/ctm-commune-touba-mosquee.jpg' }
